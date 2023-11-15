@@ -6,8 +6,8 @@
                 <h1 class="display-4 text-white mb-4 animated slideInRight">Inscription</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                        <li class="breadcrumb-item"><a class="text-white" href="#">Accueil</a></li>
-                        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="/">Accueil</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="/">Pages</a></li>
                         <li class="breadcrumb-item text-white active" aria-current="page">S'inscrire</li>
                     </ol>
                 </nav>

@@ -7,16 +7,9 @@
 <!-- About Start -->
 @include('feature.sections.home-sections.about')
 <!-- About End -->
-
-
-
-
-
 <!-- Feature Start -->
 @include('feature.sections.home-sections.feature')
 <!-- Feature End -->
-
-
 <!-- Case Start -->
 {{--@include('feature.sections.home-sections.case')--}}
 <!-- Case End -->
@@ -28,12 +21,12 @@
 
 
 <!-- Team Start -->
-@include('feature.sections.home-sections.team')
+{{--@include('feature.sections.home-sections.team')--}}
 <!-- Team End -->
 
 
 <!-- Testimonial Start -->
-@include('feature.sections.home-sections.testimonial')
+{{--@include('feature.sections.home-sections.testimonial')--}}
 <!-- Testimonial End -->
 
 
