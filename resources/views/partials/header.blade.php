@@ -23,18 +23,19 @@
                 <div class="navbar-nav ms-auto">
                     <a href="/" class="nav-item nav-link {{'/' == request()->path() ? 'active' : ''}}">Accueil</a>
                     <a href="{{route('about')}}" class="nav-item nav-link {{'about' == request()->path() ? 'active' : ''}}">A propos de nous</a>
-                    <div class="nav-item dropdown">
-                        <a href="{{route('management')}}" class="nav-link dropdown-toggle {{'management' == request()->path() ? 'active' : ''}}" data-bs-toggle="dropdown">Formations</a>
-                        <div class="dropdown-menu bg-light mt-2">
-                            <a href="{{route('management')}}" class="dropdown-item">ISO 21502 Project Management</a>
-                            <a href="{{route('foundation')}}" class="dropdown-item">ISO 27001 Foundation</a>
-                            <a href="{{route('auditor')}}" class="dropdown-item">ISO 27001 Lead Auditor</a>
-                            <a href="{{route('implementer')}}" class="dropdown-item">ISO 27001 lead Implementer</a>
-                            <a href="{{route('business')}}" class="dropdown-item">ISO 22301 Business Continuity Management</a>
-                        </div>
-                    </div>
-                    <a href="{{route('inscription')}}" class="nav-item nav-link {{'inscription' == request()->path() ? 'active' : ''}}">Inscriptions</a>
+{{--                    <div class="nav-item dropdown">--}}
+{{--                        <a href="{{route('management')}}" class="nav-link dropdown-toggle {{'management' == request()->path() ? 'active' : ''}}" data-bs-toggle="dropdown">Formations</a>--}}
+{{--                        <div class="dropdown-menu bg-light mt-2">--}}
+{{--                            <a href="{{route('management')}}" class="dropdown-item">ISO 21502 Project Management</a>--}}
+{{--                            <a href="{{route('foundation')}}" class="dropdown-item">ISO 27001 Foundation</a>--}}
+{{--                            <a href="{{route('auditor')}}" class="dropdown-item">ISO 27001 Lead Auditor</a>--}}
+{{--                            <a href="{{route('implementer')}}" class="dropdown-item">ISO 27001 lead Implementer</a>--}}
+{{--                            <a href="{{route('business')}}" class="dropdown-item">ISO 22301 Business Continuity Management</a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+                    <a href="{{route('formation')}}" class="nav-item nav-link {{'formation' == request()->path() ? 'active' : ''}}">Formations</a>
                     <a href="{{route('aboutPecb')}}" class="nav-item nav-link {{'aboutPecb' == request()->path() ? 'active' : ''}}">A propos de PECB</a>
+                    <a href="{{route('news')}}" class="nav-item nav-link {{'news' == request()->path() ? 'active' : ''}}">Actualités</a>
                     <a href="{{route('contact')}}" class="nav-item nav-link {{'contact' == request()->path() ? 'active' : ''}}">Contact</a>
                 </div>
                 <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"

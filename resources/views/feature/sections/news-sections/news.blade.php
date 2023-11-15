@@ -38,9 +38,6 @@
     </div>
 </div>
 <!-- Full Screen Search End -->
-<!-- About Start -->
-@include('feature.sections.home-sections.about')
-<!-- About End -->
 <!-- Case Start -->
 @include('feature.sections.home-sections.case')
 <!-- Case End -->
