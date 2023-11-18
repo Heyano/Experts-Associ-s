@@ -58,14 +58,14 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Picture</label>
-                                                        <input type="text" class="form-control" name="picture" placeholder="photo" value="{{$training->picture}}">
+                                                        <input type="text" class="form-control" name="picture" placeholder="photo" value="{{$formation->picture}}">
                                                     </div>
                                                     <input type="hidden" name="id" value="{{ $formation->id }}">
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Intilulé de la formation</label>
-                                                        <input class="form-control" type="text" name="label" placeholder="Intilulé de la formation" value="{{$training->label}}">
+                                                        <input class="form-control" type="text" name="label" placeholder="Intilulé de la formation" value="{{$formation->label}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -73,14 +73,14 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Date</label>
-                                                        <input class="form-control" type="date" name="date" placeholder="Date" value="{{$training->date}}">
+                                                        <input class="form-control" type="date" name="date" placeholder="Date" value="{{$formation->date}}">
                                                     </div>
                                                 </div>
 
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Durée</label>
-                                                        <input class="form-control" placeholder="Durée" name="duration" value="{{$training->duration}}">
+                                                        <input class="form-control" placeholder="Durée" name="duration" value="{{$formation->duration}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -88,26 +88,26 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Prix Unitaire</label>
-                                                        <input class="form-control" type="text" placeholder="Prix Unitaire" name="unitPrice" value="{{$training->unitPrice}}">
+                                                        <input class="form-control" type="text" placeholder="Prix Unitaire" name="unitPrice" value="{{$formation->unitPrice}}">
                                                     </div>
                                                 </div>
 
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Coût en $/ Groupe de 5 à 25</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 5 à 25" name="firstGroupPrice" value="{{$training->firstGroupPrice}}">
+                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 5 à 25" name="firstGroupPrice" value="{{$formation->firstGroupPrice}}">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Coût en $/ Groupe de 25 à 50</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 25 à 50" name="secondGroupPrice" value="{{$training->secondGroupPrice}}">
+                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 25 à 50" name="secondGroupPrice" value="{{$formation->secondGroupPrice}}">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Coût en $/ Groupe de 50 à 100</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 50 à 100" name="thirdGroupPrice" value="{{$training->thirdGroupPrice}}">
+                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 50 à 100" name="thirdGroupPrice" value="{{$formation->thirdGroupPrice}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -124,18 +124,6 @@
 
                                                         @endIf
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 col-sm-6 mb-3">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Auteur</label>
-                                                        <input class="form-control" type="text" name="author" placeholder="Auteur" value="{{$training->author}}">
                                                     </div>
                                                 </div>
                                             </div>
