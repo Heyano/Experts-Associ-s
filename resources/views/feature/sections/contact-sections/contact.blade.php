@@ -46,41 +46,48 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Contact Us</div>
-            <h1 class="mb-4">If You Have Any Query, Please Contact Us</h1>
+            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Contactez-nous</div>
+            <h1 class="mb-4">Si vous avez des questions, s’il vous plaît contactez-nous</h1>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-7">
-                <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                <p class="text-center mb-4">Contactez-nous maintenant pour un meilleur offre sur toutes nos <a href="{{route('formation')}}">formations.
+                    </a>.</p>
                 <div class="wow fadeIn" data-wow-delay="0.3s">
-                    <form>
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li class="alert alert-danger"> {{$error}}</li>
+                        @endforeach
+                    </ul>
+                    <form method="post" action="{{ route('postContactForm') }}">
+                        @csrf>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Votre Nom">
+                                    <label for="name">Votre Nom</label>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Votre Numero">
+                                    <label for="phone">Téléphone</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+                                    <label for="email">Votre Adresse-Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                    <textarea class="form-control" placeholder="message" name="message" id="message" style="height: 150px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">Envoyer</button>
                             </div>
                         </div>
                     </form>
