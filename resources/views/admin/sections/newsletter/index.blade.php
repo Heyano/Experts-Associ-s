@@ -59,7 +59,7 @@
                                     @php
                                         $ide = 0;
                                     @endphp
-                                    @foreach($newsLetters as $item)
+                                    @foreach($newsLetter as $item)
                                         <tr>
                                             <th scope="row">{{ $ide += 1 }}</th>
                                             <td>{{$item->email}}</td>

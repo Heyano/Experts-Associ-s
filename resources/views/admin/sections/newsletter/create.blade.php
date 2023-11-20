@@ -43,12 +43,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="float-right mt-0 mb-0">
-                                        <a href="{{ route('getNewsLetter') }}" class="btn btn-secondary mr-3">
-                                            <i class="fe fe-x mr-2"></i>Annuler
-                                        </a>
-                                        <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                    <div class="row mt-2">
+                                        <div class="col"></div>
+                                        <div class="col float-right mt-0 mb-0">
+                                            <a href="{{ route('getNewsLetter') }}" class="btn btn-secondary mr-3">
+                                                <i class="fe fe-x mr-2"></i>Annuler
+                                            </a>
+                                            <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                        </div>
+                                        <div class="col"></div>
                                     </div>
+
                                 </form>
                             </div>
                         </div>

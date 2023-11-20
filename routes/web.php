@@ -45,7 +45,13 @@ Route::get('aboutPecb',[AboutPecbController::class,'AboutPecb'])->name('aboutPec
 
 Route::get('formation',[FormationController::class,'Formation'])->name('formation');
 
+Route::get('service-formation', [FormationController::class, 'service_formation'])->name('getServiceFormation'); //commentaire d'introduction de la formation
+
+Route::get('formation-view', [FormationController::class, 'view'])->name('getFormationView');
+
 Route::get('contact',[ContactController::class,'Contact'])->name('contact');
+
+Route::post('contact', [ContactController::class, 'contact_form'])->name('postContactForm');
 
 Route::get('management',[ManagementController::class,'Management'])->name('management');
 
@@ -74,6 +80,8 @@ Route::get('subscription',[Subscriptioncontroller::class,'Subscription'])->name(
 Route::post('subscription-post', [SubscriptionController::class, 'subscription_form'])->name('SubscriptionForm');
 
 Route::get('subscription-result', [SubscriptionController::class, 'subscription_result'])->name('SubscriptionResult');
+
+Route::post('news-letter', [ContactController::class, 'newsLetter'])->name('postNewsLetter');
 
 
 //Route Admin

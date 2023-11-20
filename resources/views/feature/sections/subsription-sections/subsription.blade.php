@@ -59,19 +59,19 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="firstname" id="name" placeholder="Votre Nom">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Votre Nom">
                                     <label for="name">Nom</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="lastname" id="firstname" placeholder="Votre Prénom">
+                                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Votre Prénom">
                                     <label for="firstname">Prénom</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Votre Email">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email">
                                     <label for="email">Adresse-Email</label>
                                 </div>
                             </div>

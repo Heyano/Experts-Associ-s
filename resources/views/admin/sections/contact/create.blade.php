@@ -98,13 +98,17 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <dic class="row">
+                                        <div class="col"></div>
+                                        <div class="col float-right mt-0 mb-0">
+                                            <a href="{{ route('AdminContactList') }}" class="btn btn-secondary mr-3">
+                                                <i class="fe fe-x mr-2"></i>Annuler
+                                            </a>
+                                            <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                        </div>
+                                        <div class="col"></div>
+                                    </dic>
 
-                                    <div class="float-right mt-0 mb-0">
-                                        <a href="{{ route('AdminContactList') }}" class="btn btn-secondary mr-3">
-                                            <i class="fe fe-x mr-2"></i>Annuler
-                                        </a>
-                                        <button class="btn btn-primary " type="submit">Enregistrer</button>
-                                    </div>
                                 </form>
                             </div>
                         </div>

@@ -99,34 +99,34 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Heure</label>
-                                                        <input class="form-control" type="text" placeholder="Coût / Personne" name="unitPrice">
+                                                        <input class="form-control" type="time" placeholder="Heure" name="time">
                                                     </div>
                                                 </div>
 
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Prix</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 5 à 25" name="firstGroupPrice">
+                                                        <input class="form-control" type="number" placeholder="Prix" name="price">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label class="form-label">Category</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 25 à 50" name="secondGroupPrice">
+                                                        <label class="form-label">Catégorie</label>
+                                                        <input class="form-control" type="text" placeholder="Catégorie" name="category">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Ville</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 50 à 100" name="thirdGroupPrice">
+                                                        <input class="form-control" type="text" placeholder="Ville" name="city">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col mb-3">
                                                     <div class="form-group">
-                                                        <label class="form-label">Commentaire</label>
-                                                        <textarea class="form-control" rows="2" placeholder="My Bio" name="comment"></textarea>
+                                                        <label class="form-label">Contenu</label>
+                                                        <textarea class="form-control" rows="2" placeholder="Contenu" name="content"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

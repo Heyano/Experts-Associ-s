@@ -27,77 +27,71 @@
                     </div><!-- end card header -->
 
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-                        <ul>
-                            @foreach($errors->all() as $error)
-                                <li class="alert alert-danger"> {{$error}}</li>
-                            @endforeach
                         <div class="listjs-table" id="customerList">
                             <div class="row g-4 mb-3">
-                                <div class="col-sm-auto">
-                                    <div>
-                                        <button type="button" class="btn btn-success add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="ri-add-line align-bottom me-1"></i> Ajouter</button>
-                                        {{--                                        <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>--}}
-                                    </div>
+                                <div class="card-header">
+                                    <a href="{{ route('AdminEditContact') }}" class="btn btn-primary" style="margin-left: 90%; color: black">
+                                        <i class="fe fe-plus mr-2"></i>
+                                        Ajouter
+                                    </a>
                                 </div>
-                                <div class="col-sm">
-                                    <div class="d-flex justify-content-sm-end">
-                                        <div class="search-box ms-2">
-                                            <input type="text" class="form-control search" placeholder="Search...">
-                                            <i class="ri-search-line search-icon"></i>
-                                        </div>
+                                @if (session('status'))
+                                    <div class="alert alert-success">
+                                        {{ session('status') }}
                                     </div>
-                                </div>
+                                @endif
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li class="alert alert-danger"> {{$error}}</li>
+                                @endforeach
                             </div>
 
                             <div class="table-responsive table-card mt-3 mb-1">
                                 <table class="table align-middle table-nowrap" id="customerTable">
-                                    <thead class="table-light">
+                                    <thead>
                                     <tr>
-                                        <th scope="col" style="width: 50px;">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="checkAll" value="option">
-                                            </div>
-                                        </th>
-                                        <th class="sort" data-sort="customer_name">Customer</th>
-                                        <th class="sort" data-sort="email">Email</th>
-                                        <th class="sort" data-sort="phone">Phone</th>
-                                        <th class="sort" data-sort="date">Joining Date</th>
-                                        <th class="sort" data-sort="status">Delivery Status</th>
-                                        <th class="sort" data-sort="action">Action</th>
+                                        <th>@lang('Nbre')</th>
+                                        <th>@lang('Date')</th>
+                                        <th>@lang('Nom et Prénom du contact')</th>
+                                        <th>@lang('Téléphone')</th>
+                                        <th>@lang('Objet')</th>
+                                        <th>@lang('Actions')</th>
                                     </tr>
                                     </thead>
-                                    <tbody class="list form-check-all">
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="chk_child" value="option1">
-                                            </div>
-                                        </th>
-                                        <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
-                                        <td class="customer_name">Mary Cousar</td>
-                                        <td class="email">marycousar@velzon.com</td>
-                                        <td class="phone">580-464-4694</td>
-                                        <td class="date">06 Apr, 2021</td>
-                                        <td class="status"><span class="badge bg-success-subtle text-success text-uppercase">Active</span></td>
-                                        <td>
-                                            <div class="d-flex gap-2">
-                                                <div class="edit">
-                                                    <button class="btn btn-sm btn-success edit-item-btn" data-bs-toggle="modal" data-bs-target="#showModal"><i class="ri-edit-2-fill"></i></button>
+                                    <tbody>
+                                    @php
+                                        $ide = 0;
+                                    @endphp
+                                    @foreach($contacts as $item)
+                                        <tr>
+                                            <th scope="row">{{ $ide += 1 }}</th>
+                                            <td>{{$item->created_at}}</td>
+                                            <td>{{$item->name}}</td>
+                                            <td>{{$item->phone}}</td>
+                                            <td>{{$item->message}}</td>
+                                            <td>
+                                                <div style="display: flex;">
+                                                    <div style="display: inline-block; flex: 1; margin: 5px;">
+                                                        <a href="{{ route('AdminUpdateContact', $item->id) }}" class="btn btn-outline-primary">
+                                                            <i class="ri-edit-2-fill" style="font-size: 20px"></i>
+                                                        </a>
+                                                    </div>
+
+                                                    <div style="display: inline-block; flex: 1; margin: 5px; ">
+                                                        <a href="{{ route('adminContactView', $item->id) }}" class="btn btn-outline-info" style="font-size: 7px !important;">
+                                                            <i class="ri-eye-2-fill" style="font-size: 20px"></i>
+                                                        </a>
+                                                    </div>
+
+                                                    <div style="display: inline-block; flex: 1; margin: 5px;">
+                                                        <a href="{{ route('AdminDeleteContact', $item->id) }}" class="btn btn-outline-danger" style="font-size: 7px !important;">
+                                                            <i class="ri-delete-back-2-fill" style="font-size: 20px"></i>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <div class="remove">
-                                                    <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-drag-move-2-fill"></i></button>
-                                                </div>
-                                                <div class="remove">
-                                                    <button class="btn btn-sm btn-danger remove-item-btn" data-bs-toggle="modal" data-bs-target="#deleteRecordModal"><i class="ri-code-view"></i></button>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                                 <div class="noresult" style="display: none">
