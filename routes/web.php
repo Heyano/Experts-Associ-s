@@ -91,6 +91,12 @@ Route::post('news-letter', [ContactController::class, 'newsLetter'])->name('post
 Route::middleware('auth')->group(function() {
 
     Route::get('admin-home', [AdminController::class, 'index'])->name('getAdminIndex');
+
+    //category
+    Route::get('admin-category', [AdminFormationController::class, 'getCategory'])->name('getAdminCategory');
+    Route::post('admin-category', [AdminFormationController::class, 'postCategory'])->name('AdminPostCategory');
+
+    //formation
     Route::get('admin-formation', [AdminFormationController::class, 'formation'])->name('getAdminFormation');
     Route::get('admin-formation/edit', [AdminFormationController::class, 'edit'])->name('editFormation');
     Route::post('admin-formation/edit', [AdminFormationController::class, 'create'])->name('postFormation');

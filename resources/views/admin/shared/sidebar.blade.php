@@ -28,19 +28,19 @@
         <!-- Dark Logo-->
         <a href="#" class="logo logo-dark">
                     <span class="logo-sm">
-                        <img src="{{url('admin/assets/images/logo-light-2.png')}}" alt="" height="22">
+                        <img src="{{url('admin/assets/images/logo-light-2.png')}}" alt="" height="44">
                     </span>
             <span class="logo-lg">
-                        <img src="{{url('admin/assets/images/logo-web-light.png')}}" alt="" height="17">
+                        <img src="{{url('admin/assets/images/logo-web-light.png')}}" alt="" height="34">
                     </span>
         </a>
         <!-- Light Logo-->
         <a href="#" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{url('admin/assets/images/logo-light-2.png')}}" alt="" height="22">
+                        <img src="{{url('admin/assets/images/logo-light-2.png')}}" alt="" height="44">
                     </span>
             <span class="logo-lg">
-                        <img src="{{url('admin/assets/images/logo-web-light.png')}}" alt="" height="17">
+                        <img src="{{url('admin/assets/images/logo-web-light.png')}}" alt="" height="34">
                     </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -60,24 +60,31 @@
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Tableau de bord</span>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{'getAdminCategory' == request()->path() ? 'active' : ''}}" href="{{route('getAdminCategory')}}" data-key="t-analytics">
+                        <i class="ri-file-2-fill"></i> <span data-key="t-dashboards">Categories</span>
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link {{'getAdminFormation' == request()->path() ? 'active' : ''}}" href="{{route('getAdminFormation')}}" data-key="t-analytics">
-                        <i class="ri-dossier-fill"></i> <span data-key="t-dashboards">Formations</span>
+                        <i class="ri-format-clear"></i> <span data-key="t-dashboards">Formations</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{'adminSubscription' == request()->path() ? 'active' : ''}}" href="{{route('adminSubscription')}}" data-key="t-analytics">
-                        <i class="ri-file-list-line"></i> <span data-key="t-dashboards">Inscriptions</span>
+                        <i class="ri-subscript"></i> <span data-key="t-dashboards">Inscriptions</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{'getNewsLetter' == request()->path() ? 'active' : ''}}" href="{{route('getNewsLetter')}}" data-key="t-analytics">
-                        <i class="ri-folder-open-fill"></i> <span data-key="t-dashboards">News-letter</span>
+                        <i class="ri-newspaper-line"></i> <span data-key="t-dashboards">News-letter</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{'AdminContactList' == request()->path() ? 'active' : ''}}" href="{{route('AdminContactList')}}" data-key="t-analytics">
-                        <i class="ri-folder-2-fill"></i> <span data-key="t-dashboards">Contact</span>
+                        <i class="ri-contacts-book-2-fill"></i> <span data-key="t-dashboards">Contact</span>
                     </a>
                 </li>
                 <!-- end Dashboard Menu -->

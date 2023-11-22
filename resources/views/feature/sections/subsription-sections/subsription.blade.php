@@ -84,11 +84,10 @@
                             <div class="col-md-4">
                                 <div class="form-floating">
                                     <select name="formation" class="form-control"  required>
-                                        <option selected style="text-align: center;">-- Formtion --</option>
-                                        <option value="1">Soutien scolaire</option>
-                                        <option value="2">Encadrement d'activités parascolaires</option>
-                                        <option value="3">Ateliers de formation</option>
-                                        <option value="4">Collete de fonds</option>
+                                        <option >-- Formation --</option>
+                                        @foreach($formation as $item)
+                                            <option value="{{ $item->id }}"> {{ $item->label }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

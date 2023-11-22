@@ -69,9 +69,7 @@
                                                         <select name="formation" class="form-control"  required>
                                                             <option >-- Formation --</option>
                                                             @foreach($formation as $item)
-                                                                <option value="">
-                                                                    {{$item->label}}
-                                                                </option>
+                                                                <option value="{{ $item->id }}"> {{ $item->label }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>

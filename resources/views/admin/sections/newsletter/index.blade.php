@@ -59,7 +59,7 @@
                                     @php
                                         $ide = 0;
                                     @endphp
-                                    @foreach($newsLetter as $item)
+                                    @foreach($newsLetters as $item)
                                         <tr>
                                             <th scope="row">{{ $ide += 1 }}</th>
                                             <td>{{$item->email}}</td>
@@ -68,7 +68,7 @@
                                                 <div style="display: flex;">
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">
                                                         <a href="{{ route('deleteAddress', $item->id) }}" class="btn btn-outline-danger" style="font-size: 7px !important;">
-                                                            <i class="fa fa-trash"></i>
+                                                            <i class="ri-delete-back-2-fill"></i>
                                                         </a>
                                                     </div>
                                                 </div>

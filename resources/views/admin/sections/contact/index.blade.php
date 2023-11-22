@@ -73,19 +73,19 @@
                                                 <div style="display: flex;">
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">
                                                         <a href="{{ route('AdminUpdateContact', $item->id) }}" class="btn btn-outline-primary">
-                                                            <i class="ri-edit-2-fill" style="font-size: 20px"></i>
+                                                            <i class="ri-edit-2-fill"></i>
                                                         </a>
                                                     </div>
 
                                                     <div style="display: inline-block; flex: 1; margin: 5px; ">
                                                         <a href="{{ route('adminContactView', $item->id) }}" class="btn btn-outline-info" style="font-size: 7px !important;">
-                                                            <i class="ri-eye-2-fill" style="font-size: 20px"></i>
+                                                            <i class="ri-eye-2-fill"></i>
                                                         </a>
                                                     </div>
 
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">
                                                         <a href="{{ route('AdminDeleteContact', $item->id) }}" class="btn btn-outline-danger" style="font-size: 7px !important;">
-                                                            <i class="ri-delete-back-2-fill" style="font-size: 20px"></i>
+                                                            <i class="ri-delete-back-2-fill"></i>
                                                         </a>
                                                     </div>
                                                 </div>

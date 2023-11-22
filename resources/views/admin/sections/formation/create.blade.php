@@ -112,7 +112,12 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label class="form-label">Catégorie</label>
-                                                        <input class="form-control" type="text" placeholder="Catégorie" name="category">
+                                                        <select class="form-select" name="category" >
+                                                            <option value="">----categorie-----</option>
+                                                            @foreach($categories as $item)
+                                                                <option value="{{ $item->id }}"> {{ $item->label }}</option>
+                                                            @endforeach
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col">

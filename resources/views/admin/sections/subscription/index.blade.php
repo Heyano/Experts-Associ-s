@@ -43,7 +43,7 @@
                                     <tr>
                                         <th>@lang('Nbre')</th>
                                         <th>@lang('Nom et Prénom')</th>
-                                        <th>@lang('Intitulé de la formation')</th>
+                                        <th>@lang('Formation')</th>
                                         <th>@lang('Session de formation')</th>
                                         <th>@lang('Année')</th>
                                         <th>@lang('Date d\'inscription')</th>
@@ -57,12 +57,11 @@
                                     @foreach($subscriptions as $item)
                                         <tr>
                                             <th scope="row">{{ $ide += 1 }}</th>
-                                            <td>{{$item->lastname}} {{$item->firstname}}</td>
+                                            <td>{{$item->name}} {{$item->firstname}}</td>
                                             <td>
-                                                @php
-                                                    $trainingLabel = $trainings->where('id', $item->training_id)->first()->label ?? '';
-                                                @endphp
-                                                {{ $trainingLabel }}
+                                                @foreach ($formations as $item)
+                                                    {{ $item->label }}
+                                                @endforeach
                                             </td>
                                             <td>{{$item->sessionFormation}}</td>
                                             <td>{{$item->year}}</td>
@@ -71,7 +70,7 @@
                                                 <div style="display: flex;">
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">
                                                         <a href="{{ route('AdminUpdateSubscription', $item->id) }}" class="btn btn-outline-primary" style="font-size: 7px !important;">
-                                                            <i class="ri-edit-2-fill">
+                                                            <i class="ri-edit-2-fill"></i>
                                                         </a>
                                                     </div>
 
