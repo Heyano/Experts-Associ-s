@@ -60,22 +60,41 @@
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Tableau de bord</span>
                     </a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link {{'getAdminCategory' == request()->path() ? 'active' : ''}}" href="{{route('getAdminCategory')}}" data-key="t-analytics">
-                        <i class="ri-file-2-fill"></i> <span data-key="t-dashboards">Categories</span>
+                    <a class="nav-link menu-link" href="#sidebarCharts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCharts">
+                        <i class="ri-pie-chart-line"></i> <span data-key="t-charts">Formations</span>
                     </a>
+                    <div class="collapse menu-dropdown" id="sidebarCharts">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{route('getAdminCategory')}}" class="nav-link" data-key="t-line"> Catégories
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('getAdminFormation')}}" class="nav-link" data-key="t-area">Nos Formations
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {{'getAdminFormation' == request()->path() ? 'active' : ''}}" href="{{route('getAdminFormation')}}" data-key="t-analytics">
-                        <i class="ri-format-clear"></i> <span data-key="t-dashboards">Formations</span>
+                    <a class="nav-link menu-link" href="#sidebarIcons" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarIcons">
+                        <i class="ri-compasses-2-line"></i> <span data-key="t-icons">Inscriptions</span>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{'adminSubscription' == request()->path() ? 'active' : ''}}" href="{{route('adminSubscription')}}" data-key="t-analytics">
-                        <i class="ri-subscript"></i> <span data-key="t-dashboards">Inscriptions</span>
-                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarIcons">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a href="{{route('getAdminSession')}}" class="nav-link" data-key="t-remix">Sessions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('getAdminAnnee')}}" class="nav-link" data-key="t-boxicons">Années</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('adminSubscription')}}" class="nav-link" data-key="t-material-design">Nos Inscrptions</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{'getNewsLetter' == request()->path() ? 'active' : ''}}" href="{{route('getNewsLetter')}}" data-key="t-analytics">

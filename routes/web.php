@@ -95,7 +95,18 @@ Route::middleware('auth')->group(function() {
     //category
     Route::get('admin-category', [AdminFormationController::class, 'getCategory'])->name('getAdminCategory');
     Route::post('admin-category', [AdminFormationController::class, 'postCategory'])->name('AdminPostCategory');
-
+    Route::get('admin-news-letter/delete/{id}', [AdminNewsLetterController::class, 'delete_newsLetter'])->name('deleteAddress');
+    Route::get('admin-news-letter/edit', [AdminNewsLetterController::class, 'edit'])->name('AdminEditMail');
+    //annee
+    Route::get('admin-annee', [AdminSubscriptionController::class, 'getAnnee'])->name('getAdminAnnee');
+    Route::post('admin-annee', [AdminSubscriptionController::class, 'postAnnee'])->name('AdminPostAnnee');
+    Route::get('admin-news-letter/delete/{id}', [AdminNewsLetterController::class, 'delete_newsLetter'])->name('deleteAddress');
+    Route::get('admin-news-letter/edit', [AdminNewsLetterController::class, 'edit'])->name('AdminEditMail');
+    //session
+    Route::get('admin-session', [AdminSubscriptionController::class, 'getSessoin'])->name('getAdminSession');
+    Route::post('admin-session', [AdminSubscriptionController::class, 'postSession'])->name('AdminPostSession');
+    Route::get('admin-session/delete/{id}', [AdminNewsLetterController::class, 'delete_newsLetter'])->name('deleteAddress');
+    Route::get('admin-session/edit', [AdminNewsLetterController::class, 'edit'])->name('AdminEditMail');
     //formation
     Route::get('admin-formation', [AdminFormationController::class, 'formation'])->name('getAdminFormation');
     Route::get('admin-formation/edit', [AdminFormationController::class, 'edit'])->name('editFormation');

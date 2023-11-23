@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Annee;
 use App\Models\Category;
 use App\Models\Formation;
+use App\Models\Session;
 
 function prepareCategory($label){
     $category = new Category();
@@ -9,7 +11,20 @@ function prepareCategory($label){
 
     return $category;
 }
+function prepareSession($label, $dateDebut, $dateFin){
+    $session = new Session();
+    $session->label = $label;
+    $session->dateDebut = $dateDebut;
+    $session->dateFin = $dateFin;
 
+    return $session;
+}
+function prepareAnnee($label){
+    $Annee = new Annee();
+    $Annee->label = $label;
+
+    return $Annee;
+}
 function prepareFormation($label, $date, $picture, $duration, $content, $time, $city, $category, $price){
     //$category = Category::where('id', $category)->first();
     //$idCategory = $category->id;
