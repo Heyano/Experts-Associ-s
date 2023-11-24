@@ -78,8 +78,8 @@
                                                     <div class="form-group">
                                                         <label class="form-label">Session</label>
                                                         <select name="session" class="form-control"  required>
-                                                            @foreach($sessions as $session)
-                                                                <option value="{{ $session->id }}"> {{ $session->label }}</option>
+                                                            @foreach($sessions as $item)
+                                                                <option value="{{ $item->id }}"> {{ $item->label }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>

@@ -64,8 +64,8 @@
                                                 @endforeach
                                             </td>
                                             <td>
-                                                @foreach ($sessions as $session)
-                                                    {{ $session->label }}
+                                                @foreach ($sessions as $item)
+                                                    {{ $item->label }}
                                                 @endforeach
                                             </td>
                                             <td>
