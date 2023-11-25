@@ -69,7 +69,9 @@
                                                 @endforeach
                                             </td>
                                             <td>
-                                                {{$item->annee}}
+                                                @foreach ($annees as $item)
+                                                    {{ getYears($item->label) }}
+                                                @endforeach
                                             </td>
                                             <td>{{$item->created_at}}</td>
                                             <td>

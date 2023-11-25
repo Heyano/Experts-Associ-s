@@ -31,7 +31,7 @@
                             <div class="row g-4 mb-3">
                                 <div class="card-header">
                                     <a href="{{ route('editFormation') }}" class="btn btn-primary" style="margin-left: 90%; color: black">
-                                        <i class="fe fe-plus mr-2"></i>
+                                        <i class="ri-add-line align-bottom me-1"></i>
                                         Ajouter
                                     </a>
                                 </div>

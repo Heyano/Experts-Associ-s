@@ -25,6 +25,15 @@ function prepareAnnee($label){
 
     return $Annee;
 }
+function getYears($date) {
+    $dateInfo = date_parse($date);
+
+    if ($dateInfo['year']) {
+        return $dateInfo['year'];
+    } else {
+        return false; // La date est invalide
+    }
+}
 function prepareFormation($label, $date, $picture, $duration, $content, $time, $city, $category, $price){
     //$category = Category::where('id', $category)->first();
     //$idCategory = $category->id;

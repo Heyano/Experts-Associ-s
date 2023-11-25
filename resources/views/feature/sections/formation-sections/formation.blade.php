@@ -66,7 +66,7 @@
                             </div>
                             <div class="accordion-body col-lg-2">Terminé <br> 4000 CHF</div>
                             <div class="accordion-body col-lg-4">
-                                <a href="{{route('busnessSceance')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>
+                                <a href="{{route('subscription')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                             </div>
                             <div class="accordion-body col-lg-2">Terminé <br> 4000 CHF</div>
                             <div class="accordion-body col-lg-4">
-                                <a href="{{route('implementerSceance')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>
+                                <a href="{{route('subscription')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                             </div>
                             <div class="accordion-body col-lg-2">Terminé <br> 4000 CHF</div>
                             <div class="accordion-body col-lg-4">
-                                <a href="{{route('implementerSceance')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>
+                                <a href="{{route('subscription')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                             </div>
                             <div class="accordion-body col-lg-2">Terminé <br> 4000 CHF</div>
                             <div class="accordion-body col-lg-4">
-                                <a href="{{route('managerSceance')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>
+                                <a href="{{route('subscription')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>
                             </div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@
                                 Terminé <br> 4000 CHF
                             </div>
                             <div class="accordion-body col-lg-4">
-                                <a href="{{route('managerSceance')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>                            </div>
+                                <a href="{{route('subscription')}}" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight" style="background-color: var(--primary)">S'inscrire</a>                            </div>
                         </div>
                     </div>
 {{--                    <div class="accordion-item wow fadeIn" data-wow-delay="0.6s">--}}

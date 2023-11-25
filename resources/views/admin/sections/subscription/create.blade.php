@@ -88,9 +88,9 @@
                                                 <div class="col col-4">
                                                     <div class="form-group">
                                                         <label class="form-label">Année</label>
-                                                        <select name="year" class="form-control"  required>
+                                                        <select name="annee" class="form-control"  required>
                                                             @foreach($annees as $item)
-                                                                <option value="{{ $item->id }}"> {{ $item->label }}</option>
+                                                                <option value="{{ $item->id }}"> {{getYears ($item->label) }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>

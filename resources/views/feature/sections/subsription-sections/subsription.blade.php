@@ -93,23 +93,19 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-floating">
-                                    <select name="sessionFormation" class="form-control"  required>
-                                        <option selected style="text-align: center;">-- Session --</option>
-                                        <option value="1">Soutien scolaire</option>
-                                        <option value="2">Encadrement d'activités parascolaires</option>
-                                        <option value="3">Ateliers de formation</option>
-                                        <option value="4">Collete de fonds</option>
+                                    <select name="session" class="form-control"  required>
+                                        @foreach($sessions as $item)
+                                            <option value="{{ $item->id }}"> {{ $item->label }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-floating">
-                                    <select name="year" class="form-control"  required>
-                                        <option selected style="text-align: center;">-- Année --</option>
-                                        <option value="1">Soutien scolaire</option>
-                                        <option value="2">Encadrement d'activités parascolaires</option>
-                                        <option value="3">Ateliers de formation</option>
-                                        <option value="4">Collete de fonds</option>
+                                    <select name="annee" class="form-control"  required>
+                                        @foreach($annees as $item)
+                                            <option value="{{ $item->id }}"> {{getYears ($item->label) }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
