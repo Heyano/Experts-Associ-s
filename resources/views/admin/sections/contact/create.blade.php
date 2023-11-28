@@ -61,29 +61,8 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label class="form-label">Societé / Entreprise</label>
-                                                        <input type="text" class="form-control" name="society" placeholder="Nom de Societé / Entreprise" >
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Fonction</label>
-                                                        <input class="form-control" type="text" name="function" placeholder="Fonction">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group">
                                                         <label class="form-label">Adresse Mail</label>
                                                         <input class="form-control" type="email" name="email" placeholder="abcd@gr.com">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Sujet</label>
-                                                        <input class="form-control" placeholder="Sujet" name="subject">
                                                     </div>
                                                 </div>
                                             </div>

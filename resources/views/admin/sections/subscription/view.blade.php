@@ -30,40 +30,35 @@
                                     <table>
                                         <tbody style="font-family: bold,'Times New Roman Black'; font-size: 18px!important;">
                                         <tr>
-                                            <td style="margin-bottom: 50px !important;"><strong>Nom et Prénom : </strong>{{$subscription->lastname}} {{$subscription->firstname}}</td>
+                                            <td style="margin-bottom: 50px !important;"><strong>Nom et Prénom : </strong>{{$subscription->name}} {{$subscription->firstname}}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Intitulé de la formation choisi : </strong>
+                                            <td><strong>Formation : </strong>
                                                 @php
-                                                    $trainingLabel = $trainings->where('id', $subscription->training_id)->first()->label ?? '';
+                                                    $formationLabel = $formation->where('id', $subscription->formation_id)->first()->label ?? '';
                                                 @endphp
-                                                {{ $trainingLabel }}
+                                                {{ $formationLabel }}
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Module de la formation choissie : </strong>
+                                            <td><strong>Session : </strong>
                                                 @php
-                                                    $trainingModule = $trainings->where('id', $subscription->training_id)->first()->module ?? '';
+                                                    $sessionLabel = $session->where('id', $subscription->session_id)->first()->label ?? '';
                                                 @endphp
-                                                {{ $trainingModule }}
+                                                {{ $sessionLabel }}
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Session : </strong>{{$subscription->sessionFormation}}</td>
+                                            <td><strong>Année : </strong>
+                                                @php
+                                                    $anneeLabel = $annee->where('id', $subscription->annee_id)->first()->label ?? '';
+                                                @endphp
+                                                {{ $anneeLabel }}
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Année : </strong>{{$subscription->year}}</td>
+                                            <td><strong>Date d'inscription: </strong>{{$subscription->created_at}}</td>
                                         </tr>
-                                        <tr>
-                                            <td><strong>Téléphone : </strong>0{{$subscription->phone}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Adresse mail : </strong>{{$subscription->email}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Date d'inscription ou candidature : </strong>{{$subscription->created_at}}</td>
-                                        </tr>
-
                                         </tbody>
                                     </table>
                                 </div>

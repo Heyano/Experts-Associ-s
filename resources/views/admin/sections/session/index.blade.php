@@ -84,19 +84,7 @@
                                             <td>
                                                 <div style="display: flex;">
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">
-                                                        <a href="#" class="btn btn-outline-primary" style="font-size: 7px !important;">
-                                                            <i class="ri-edit-2-fill"></i>
-                                                        </a>
-                                                    </div>
-
-                                                    <div style="display: inline-block; flex: 1; margin: 5px; ">
-                                                        <a href="#" class="btn btn-outline-info" style="font-size: 7px !important;">
-                                                            <i class="ri-eye-2-fill"></i>
-                                                        </a>
-                                                    </div>
-
-                                                    <div style="display: inline-block; flex: 1; margin: 5px;">
-                                                        <a href="#" class="btn btn-outline-danger" style="font-size: 7px !important;">
+                                                        <a href="{{ route('deleteSession', $item->id) }}" class="btn btn-outline-danger" style="font-size: 7px !important;">
                                                             <i class="ri-delete-back-2-fill"></i>
                                                         </a>
                                                     </div>

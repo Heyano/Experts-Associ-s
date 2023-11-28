@@ -45,6 +45,8 @@ Route::get('aboutPecb',[AboutPecbController::class,'AboutPecb'])->name('aboutPec
 
 Route::get('formation',[FormationController::class,'Formation'])->name('formation');
 
+Route::post('news-letter', [ContactController::class, 'newsLetter'])->name('postNewsLetter');
+
 Route::get('service-formation', [FormationController::class, 'service_formation'])->name('getServiceFormation'); //commentaire d'introduction de la formation
 
 Route::get('formation-view', [FormationController::class, 'view'])->name('getFormationView');
@@ -95,18 +97,18 @@ Route::middleware('auth')->group(function() {
     //category
     Route::get('admin-category', [AdminFormationController::class, 'getCategory'])->name('getAdminCategory');
     Route::post('admin-category', [AdminFormationController::class, 'postCategory'])->name('AdminPostCategory');
-    Route::get('admin-news-letter/delete/{id}', [AdminNewsLetterController::class, 'delete_newsLetter'])->name('deleteAddress');
-    Route::get('admin-news-letter/edit', [AdminNewsLetterController::class, 'edit'])->name('AdminEditMail');
+    Route::get('admin-category/delete/{id}', [AdminFormationController::class, 'delete_category'])->name('deleteCategory');
+    Route::get('admin-category/edit', [AdminFormationController::class, 'edit_category'])->name('AdminEditCategory');
     //annee
     Route::get('admin-annee', [AdminSubscriptionController::class, 'getAnnee'])->name('getAdminAnnee');
     Route::post('admin-annee', [AdminSubscriptionController::class, 'postAnnee'])->name('AdminPostAnnee');
-    Route::get('admin-news-letter/delete/{id}', [AdminNewsLetterController::class, 'delete_newsLetter'])->name('deleteAddress');
-    Route::get('admin-news-letter/edit', [AdminNewsLetterController::class, 'edit'])->name('AdminEditMail');
+    Route::get('admin-annee/delete/{id}', [AdminSubscriptionController::class, 'delete_annee'])->name('deleteAnnee');
+    Route::get('admin-annee/edit', [AdminSubscriptionController::class, 'edit_annee'])->name('AdminEditAnnee');
     //session
     Route::get('admin-session', [AdminSubscriptionController::class, 'getSessoin'])->name('getAdminSession');
     Route::post('admin-session', [AdminSubscriptionController::class, 'postSession'])->name('AdminPostSession');
-    Route::get('admin-session/delete/{id}', [AdminNewsLetterController::class, 'delete_newsLetter'])->name('deleteAddress');
-    Route::get('admin-session/edit', [AdminNewsLetterController::class, 'edit'])->name('AdminEditMail');
+    Route::get('admin-session/delete/{id}', [AdminSubscriptionController::class, 'delete_session'])->name('deleteSession');
+    Route::get('admin-session/edit_session', [AdminSubscriptionController::class, 'edit_session'])->name('AdminEditSession');
     //formation
     Route::get('admin-formation', [AdminFormationController::class, 'formation'])->name('getAdminFormation');
     Route::get('admin-formation/edit', [AdminFormationController::class, 'edit'])->name('editFormation');
