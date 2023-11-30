@@ -66,10 +66,10 @@
                                                 <div class="col col-4">
                                                     <div class="form-group">
                                                         <label class="form-label">Formation</label>
-                                                        <select name="formation" class="form-control"  required>
-                                                            <option >-- Formation --</option>
-                                                            @foreach($formation as $item)
-                                                                <option value="{{ $item->id }}"> {{ $item->label }}</option>
+                                                        <select name="formation" id="formation" class="form-control"  required>
+                                                            <option value="" disabled selected>-- Formation --</option>
+                                                            @foreach($formation as $formation)
+                                                                <option value="{{ $formation->id }}">{{ $formation->label }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -77,9 +77,10 @@
                                                 <div class="col col-4">
                                                     <div class="form-group">
                                                         <label class="form-label">Session</label>
-                                                        <select name="session" class="form-control"  required>
-                                                            @foreach($sessions as $item)
-                                                                <option value="{{ $item->id }}"> {{ $item->label }}</option>
+                                                        <select name="session" id="session" class="form-control"  required>
+                                                            <option value="" disabled selected>-- Session --</option>
+                                                            @foreach($sessions as $session)
+                                                                <option value="{{ $session->id }}">{{ $session->label }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -88,9 +89,10 @@
                                                 <div class="col col-4">
                                                     <div class="form-group">
                                                         <label class="form-label">Année</label>
-                                                        <select name="annee" class="form-control"  required>
-                                                            @foreach($annees as $item)
-                                                                <option value="{{ $item->id }}"> {{getYears ($item->label) }}</option>
+                                                        <select name="annee" id="annee" class="form-control"  required>
+                                                            <option value="" disabled selected>-- Année --</option>
+                                                            @foreach($annees as $annee)
+                                                                <option value="{{ $annee->id }}">{{getYears($annee->label)}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -101,15 +103,15 @@
                                     </div>
                                     <br>
                                     <div class="row mt-2">
-                                        <div class="col col-4">
+                                        <div class="col">
                                         </div>
-                                        <div class="float-right mt-0 mb-0 col col-4">
+                                        <div class="float-right mt-0 mb-0 col">
                                             <a href="{{ route('adminSubscription') }}" class="btn btn-secondary mr-3">
                                                 <i class="fe fe-x mr-2"></i>Annuler
                                             </a>
                                             <button class="btn btn-primary " type="submit">Enregistrer</button>
                                         </div>
-                                        <div class="col col-4">
+                                        <div class="col">
                                         </div>
                                     </div>
                                 </form>

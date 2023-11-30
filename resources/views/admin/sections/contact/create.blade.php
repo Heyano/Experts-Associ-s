@@ -77,7 +77,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <dic class="row">
+                                    <dic class="row mt-2">
                                         <div class="col"></div>
                                         <div class="col float-right mt-0 mb-0">
                                             <a href="{{ route('AdminContactList') }}" class="btn btn-secondary mr-3">

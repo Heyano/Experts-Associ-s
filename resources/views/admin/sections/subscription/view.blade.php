@@ -34,37 +34,30 @@
                                         </tr>
                                         <tr>
                                             <td><strong>Formation : </strong>
-                                                @php
-                                                    $formationLabel = $formation->where('id', $subscription->formation_id)->first()->label ?? '';
-                                                @endphp
-                                                {{ $formationLabel }}
+                                                {{$subscription->edition->label}}
                                             </td>
                                         </tr>
                                         <tr>
                                             <td><strong>Session : </strong>
-                                                @php
-                                                    $sessionLabel = $session->where('id', $subscription->session_id)->first()->label ?? '';
-                                                @endphp
-                                                {{ $sessionLabel }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Année : </strong>
-                                                @php
-                                                    $anneeLabel = $annee->where('id', $subscription->annee_id)->first()->label ?? '';
-                                                @endphp
-                                                {{ $anneeLabel }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Date d'inscription: </strong>{{$subscription->created_at}}</td>
+                                                @if($subscription->sessions->label)
+                                                    {{$subscription->sessions->label}}
+                                                @endif
+
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td><strong>Année : </strong>
+                                                 {{getYears($subscription->annee->label)}}
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td><strong>Date d'inscription: </strong>{{$subscription->created_at}}</td>
                                         </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

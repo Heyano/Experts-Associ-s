@@ -1,4 +1,4 @@
-<div class=" content-area">
+<div class=" content-area mt-5">
     <div class="page-header">
         <h4 class="page-title">Détails du contact</h4>
         <ol class="breadcrumb">
@@ -36,21 +36,11 @@
                                             <td style="margin-bottom: 50px !important;"><strong>Nom et prénom du Contact : </strong>{{$contact->name}}</td>
                                         </tr>
                                         <tr>
-                                            <td style="margin-bottom: 50px !important;"><strong>Societé / Entreprise : </strong>{{$contact->society}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="margin-bottom: 50px !important;"><strong>Fonction : </strong>{{$contact->function}}</td>
-                                        </tr>
-                                        <tr>
                                             <td><strong>Téléphone : </strong>0{{$contact->phone}}</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Adresse mail : </strong>{{$contact->email}}</td>
                                         </tr>
-                                        <tr>
-                                            <td><strong>Sujet : </strong>{{$contact->subject}}</td>
-                                        </tr>
-
                                         <tr>
                                             <td><strong>Message :</strong><br><span style="margin-left: 40px">{{$contact->message}}</span></td>
                                         </tr>

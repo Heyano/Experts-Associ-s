@@ -62,29 +62,8 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label class="form-label">Societé / Entreprise</label>
-                                                        <input type="text" class="form-control" name="society" placeholder="Nom de Societé / Entreprise" value="{{$contact->society}}">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Fonction</label>
-                                                        <input class="form-control" type="text" name="function" placeholder="Fonction" value="{{$contact->function}}">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group">
                                                         <label class="form-label">Adresse Mail</label>
                                                         <input class="form-control" type="email" name="email" placeholder="abcd@gr.com" value="{{$contact->email}}">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Sujet</label>
-                                                        <input class="form-control" placeholder="Sujet" name="subject" value="{{$contact->subject}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -96,23 +75,23 @@
                                                         @isset($contact)
                                                             <textarea id="inputComment" class="form-control" name="message"
                                                                       rows="4" >{{$contact->message}}</textarea>
-
                                                         @else
                                                             <textarea id="inputComment" class="form-control" name="message" rows="4" ></textarea>
-
                                                         @endIf
-
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="float-right mt-0 mb-0">
-                                        <a href="{{ route('AdminContactList') }}" class="btn btn-secondary mr-3">
-                                            <i class="fe fe-x mr-2"></i>Annuler
-                                        </a>
-                                        <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                    <div class="row mt-2">
+                                        <div class="col"></div>
+                                        <div class="float-right mt-0 mb-0 col">
+                                            <a href="{{ route('AdminContactList') }}" class="btn btn-secondary mr-3">
+                                                <i class="fe fe-x mr-2"></i>Annuler
+                                            </a>
+                                            <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                        </div>
+                                        <div class="col"></div>
                                     </div>
                                 </form>
                             </div>

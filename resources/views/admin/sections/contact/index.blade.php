@@ -54,7 +54,7 @@
                                         <th>@lang('Date')</th>
                                         <th>@lang('Nom et Prénom du contact')</th>
                                         <th>@lang('Téléphone')</th>
-                                        <th>@lang('Objet')</th>
+                                        <th>@lang('Message')</th>
                                         <th>@lang('Actions')</th>
                                     </tr>
                                     </thead>
@@ -65,14 +65,14 @@
                                     @foreach($contacts as $item)
                                         <tr>
                                             <th scope="row">{{ $ide += 1 }}</th>
-                                            <td>{{$item->created_at}}</td>
                                             <td>{{$item->name}}</td>
                                             <td>{{$item->phone}}</td>
+                                            <td>{{$item->created_at}}</td>
                                             <td>{{$item->message}}</td>
                                             <td>
                                                 <div style="display: flex;">
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">
-                                                        <a href="{{ route('AdminUpdateContact', $item->id) }}" class="btn btn-outline-primary">
+                                                        <a href="{{ route('AdminUpdateContact', $item->id) }}" class="btn btn-outline-primary" style="font-size: 7px !important;">
                                                             <i class="ri-edit-2-fill"></i>
                                                         </a>
                                                     </div>

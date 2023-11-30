@@ -59,19 +59,15 @@
                                             <th scope="row">{{ $ide += 1 }}</th>
                                             <td>{{$item->name}} {{$item->firstname}}</td>
                                             <td>
-                                                @foreach ($formations as $item)
-                                                    {{ $item->label }}
-                                                @endforeach
+                                               {{ $item->edition->label }}
                                             </td>
                                             <td>
-                                                @foreach ($sessions as $item)
-                                                    {{ $item->label }}
-                                                @endforeach
+                                                @if($item->sessions->label)
+                                                    {{$item->sessions->label}}
+                                                @endif
                                             </td>
                                             <td>
-                                                @foreach ($annees as $item)
-                                                    {{ getYears($item->label) }}
-                                                @endforeach
+                                                {{ getYears($item->annee->label) }}
                                             </td>
                                             <td>{{$item->created_at}}</td>
                                             <td>

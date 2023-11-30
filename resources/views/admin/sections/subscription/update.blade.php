@@ -38,7 +38,7 @@
                                                     <input type="hidden" name="id" value="{{ $subscription->id }}">
                                                     <div class="form-group">
                                                         <label class="form-label">Nom</label>
-                                                        <input type="text" class="form-control" name="lastname" placeholder="Votre nom" value="{{$subscription->lastname}}" required>
+                                                        <input type="text" class="form-control" name="name" placeholder="Votre nom" value="{{$subscription->name}}" required>
                                                     </div>
                                                 </div>
                                                 <div class="col">
@@ -67,12 +67,10 @@
                                                 <div class="col col-6">
                                                     <div class="form-group">
                                                         <label class="form-label">Formation</label>
-                                                        <select name="training" class="form-control" required>
-                                                            <option >-- Formation --</option>
-                                                            @foreach($trainings as $item)
-                                                                <option value="{{$item->id}}" {{ $subscription->training->id == $item->id ? 'selected' : ''}}>
-                                                                    {{$item->label}}
-                                                                </option>
+                                                        <select name="formation" class="form-control" required>
+                                                            <option value="" disabled selected>-- Formation --</option>
+                                                            @foreach($formations as $formation)
+                                                                <option value="{{ $formation->id }}">{{ $formation->label }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -80,10 +78,11 @@
                                                 <div class="col col-3">
                                                     <div class="form-group">
                                                         <label class="form-label">Session</label>
-                                                        <select name="sessionFormation" class="form-control" value="{{$subscription->sessionFormation}}"  required>
-                                                            <option value="">-- Session --</option>
-                                                            <option value="Mars">Mars</option>
-                                                            <option value="Septembre">Septembre</option>
+                                                        <select name="session" class="form-control" value="{{$subscription->session}}"  required>
+                                                            <option value="" disabled selected>-- Session --</option>
+                                                            @foreach($sessions as $session)
+                                                                <option value="{{ $session->id }}">{{ $session->label }}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
@@ -91,10 +90,11 @@
                                                 <div class="col col-3">
                                                     <div class="form-group">
                                                         <label class="form-label">Année</label>
-                                                        <select name="year" class="form-control" value="{{$subscription->year}}"  required>
-                                                            <option value="">-- Année --</option>
-                                                            <option value="2023">2023</option>
-                                                            <option value="2024">2024</option>
+                                                        <select name="annee" class="form-control" value="{{$subscription->annee}}"  required>
+                                                            <option value="" disabled selected>-- Année --</option>
+                                                            @foreach($annees as $annee)
+                                                                <option value="{{ $annee->id }}">{{ $annee->label }}</option>
+                                                            @endforeach
                                                         </select>
                                                     </div>
                                                 </div>
@@ -102,12 +102,17 @@
 
                                         </div>
                                     </div>
-                                    <div class="float-right mt-0 mb-0">
-                                        <a href="{{ route('getAdminTraining') }}" class="btn btn-secondary mr-3">
-                                            <i class="fe fe-x mr-2"></i>Annuler
-                                        </a>
-                                        <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                    <div class="row mt-2">
+                                        <div class="col-4"></div>
+                                        <div class="float-right mt-0 mb-0 col">
+                                            <a href="{{ route('getAdminFormation') }}" class="btn btn-secondary mr-3">
+                                                <i class="fe fe-x mr-2"></i>Annuler
+                                            </a>
+                                            <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                        </div>
+                                        <div class="col"></div>
                                     </div>
+
                                 </form>
                             </div>
                         </div>

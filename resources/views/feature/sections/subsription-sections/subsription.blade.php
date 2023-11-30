@@ -84,9 +84,9 @@
                             <div class="col-md-4">
                                 <div class="form-floating">
                                     <select name="formation" class="form-control"  required>
-                                        <option >-- Formation --</option>
-                                        @foreach($formation as $item)
-                                            <option value="{{ $item->id }}"> {{ $item->label }}</option>
+                                        <option value="" disabled selected>-- Formation --</option>
+                                        @foreach($formation as $formation)
+                                            <option value="{{ $formation->id }}">{{ $formation->label }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -94,8 +94,9 @@
                             <div class="col-md-4">
                                 <div class="form-floating">
                                     <select name="session" class="form-control"  required>
-                                        @foreach($sessions as $item)
-                                            <option value="{{ $item->id }}"> {{ $item->label }}</option>
+                                        <option value="" disabled selected>-- Session --</option>
+                                        @foreach($sessions as $session)
+                                            <option value="{{ $session->id }}">{{ $session->label }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -103,8 +104,9 @@
                             <div class="col-md-4">
                                 <div class="form-floating">
                                     <select name="annee" class="form-control"  required>
-                                        @foreach($annees as $item)
-                                            <option value="{{ $item->id }}"> {{getYears ($item->label) }}</option>
+                                        <option value="" disabled selected>-- Année --</option>
+                                        @foreach($annees as $annee)
+                                            <option value="{{ $annee->id }}">{{getYears($annee->label)}}</option>
                                         @endforeach
                                     </select>
                                 </div>

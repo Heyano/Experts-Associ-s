@@ -55,8 +55,9 @@
                                         <th>@lang('Nbre')</th>
                                         <th>@lang('Image')</th>
                                         <th>@lang('Intitulé de la formation')</th>
+                                        <th>@lang('Catégorie')</th>
                                         <th>@lang('Durée')</th>
-                                        <th>@lang('Coût de la formation')</th>
+                                        <th>@lang('prix de la formation')</th>
                                         <th>@lang('Actions')</th>
                                     </tr>
                                     </thead>
@@ -69,12 +70,13 @@
                                             <th scope="row">{{ $ide += 1 }}</th>
                                             <td><img src="{{ url($item->picture) }}" style="width: 32px"></td>
                                             <td>{{$item->label}}</td>
+                                            <td>{{$item->category->label}}</td>
                                             <td>{{$item->duration}}</td>
                                             <td>{{$item->price}}</td>
                                             <td>
                                                 <div style="display: flex;">
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">
-                                                        <a href="{{ route('getAdminFormation', $item->id)}}" class="btn btn-outline-primary" style="font-size: 7px !important;">
+                                                        <a href="{{ route('updateFormation', $item->id)}}" class="btn btn-outline-primary" style="font-size: 7px !important;">
                                                             <i class="ri-edit-2-fill"></i>
                                                         </a>
                                                     </div>

@@ -33,10 +33,7 @@
                                             <td style="margin-bottom: 50px !important;"><strong>Intitulé de la formation : </strong>{{$formation->label}}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Thématique de la formation : </strong>{{$formation->module}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Organisme initiateur : </strong>{{$formation->author}}</td>
+                                            <td style="margin-bottom: 50px !important;"><strong>catégorie de la formation :</strong><td>{{$formation->category->label}}</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Date du début de la formation : </strong>{{$formation->date}}</td>
@@ -44,22 +41,14 @@
                                         <tr>
                                             <td><strong>Durée de la formation : </strong>{{$formation->duration}}</td>
                                         </tr>
-
                                         <tr>
-                                            <td><strong>Tarif Unitaire (en $) : </strong>{{$formation->unitPrice}}</td>
+                                            <td><strong>Catégorie de la formation : </strong>{{$formation->c}}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Coût en $ / Groupe de 5 à 25 : </strong>{{$formation->firstGroupPrice}}</td>
+                                            <td><strong>Prix de la formation : </strong>{{$formation->price}}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Coût en $ / Groupe de 25 à 50 : </strong>{{$formation->secondGroupPrice}}</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><strong>Coût en $ / Groupe de 50 à 100 : </strong>{{$formation->thirdGroupPrice}}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Commentaire :</strong><br><span style="margin-left: 40px">{{$formation->comment}}</span></td>
+                                            <td><strong>Commentaire :</strong><br><span style="margin-left: 40px">{{$formation->content}}</span></td>
                                         </tr>
                                         </tbody>
                                     </table>

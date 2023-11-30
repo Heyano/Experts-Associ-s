@@ -87,27 +87,8 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label class="form-label">Prix Unitaire</label>
-                                                        <input class="form-control" type="text" placeholder="Prix Unitaire" name="unitPrice" value="{{$formation->unitPrice}}">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Coût en $/ Groupe de 5 à 25</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 5 à 25" name="firstGroupPrice" value="{{$formation->firstGroupPrice}}">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Coût en $/ Groupe de 25 à 50</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 25 à 50" name="secondGroupPrice" value="{{$formation->secondGroupPrice}}">
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <label class="form-label">Coût en $/ Groupe de 50 à 100</label>
-                                                        <input class="form-control" type="text" placeholder="Coût en $/ Groupe de 50 à 100" name="thirdGroupPrice" value="{{$formation->thirdGroupPrice}}">
+                                                        <label class="form-label">Prix </label>
+                                                        <input class="form-control" type="text" placeholder="Prix " name="price" value="{{$formation->unitPrice}}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -115,9 +96,9 @@
                                                 <div class="col mb-3">
                                                     <div class="form-group">
                                                         <label class="form-label">Commentaire</label>
-                                                        @isset($training)
-                                                            <textarea id="inputComment" class="form-control" name="comment"
-                                                                      rows="4" >{{$formation->comment}}</textarea>
+                                                        @isset($formation)
+                                                            <textarea id="inputComment" class="form-control" name="content"
+                                                                      rows="4" >{{$formation->content}}</textarea>
 
                                                         @else
                                                             <textarea id="inputComment" class="form-control" name="comment" rows="4" ></textarea>
@@ -129,11 +110,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="float-right mt-0 mb-0">
-                                        <a href="{{ route('getAdminFormation') }}" class="btn btn-secondary mr-3">
-                                            <i class="fe fe-x mr-2"></i>Annuler
-                                        </a>
-                                        <button class="btn btn-primary " name="submit" value="Submit" type="submit">Enregistrer</button>
+                                    <div class="row">
+                                        <div class="col-4"></div>
+                                        <div class="float-right mt-0 mb-0 col-4">
+                                            <a href="{{ route('getAdminFormation') }}" class="btn btn-secondary mr-3">
+                                                <i class="fe fe-x mr-2"></i>Annuler
+                                            </a>
+                                            <button class="btn btn-primary " name="submit" value="Submit" type="submit">Enregistrer</button>
+                                        </div>
+                                        <div class="col-4"></div>
                                     </div>
                                 </form>
                             </div>

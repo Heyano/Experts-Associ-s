@@ -130,16 +130,20 @@
                                             <div class="row">
                                                 <div class="col mb-3">
                                                     <div class="form-group">
-                                                        <label class="form-label">Contenu</label>
+                                                        <label class="form-label">Commentaire</label>
                                                         <textarea class="form-control" rows="2" placeholder="Contenu" name="content"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div>
-                                                <a href="{{ route('getAdminFormation') }}" class="btn btn-secondary mr-3">
-                                                    <i class="fe fe-x mr-2"></i>Annuler
-                                                </a>
-                                                <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                            <div class="row">
+                                                <div class="col-4"></div>
+                                                <div>
+                                                    <a href="{{ route('getAdminFormation') }}" class="btn btn-secondary mr-3">
+                                                        <i class="fe fe-x mr-2"></i>Annuler
+                                                    </a>
+                                                    <button class="btn btn-primary " type="submit">Enregistrer</button>
+                                                </div>
+                                                <div class="col-4"></div>
                                             </div>
                                         </div>
                                     </div>
