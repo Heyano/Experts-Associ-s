@@ -21,7 +21,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
-                    <a href="/" class="nav-item nav-link {{'/' == request()->path() ? 'active' : ''}}">Accueil</a>
+                    <a href="{{route('getIndex')}}" class="nav-item nav-link {{'/index' == request()->path() ? 'active' : ''}}">Accueil</a>
                     <a href="{{route('about')}}" class="nav-item nav-link {{'about' == request()->path() ? 'active' : ''}}">A propos de nous</a>
 {{--                    <div class="nav-item dropdown">--}}
 {{--                        <a href="{{route('management')}}" class="nav-link dropdown-toggle {{'management' == request()->path() ? 'active' : ''}}" data-bs-toggle="dropdown">Formations</a>--}}

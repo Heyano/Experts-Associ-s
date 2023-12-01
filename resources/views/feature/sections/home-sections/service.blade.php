@@ -1,5 +1,5 @@
 <!-- Service Start -->
-<div class="container-fluid bg-light mt-5 py-5">
+<div class="container-fluid bg-light py-5">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
@@ -13,65 +13,19 @@
             </div>
             <div class="col-lg-7">
                 <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="row g-4">
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                            @foreach($formations as $formation)
+                            <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                    <div class="service-icon btn-square">
-                                        <i class="fa fa-robot fa-2x"></i>
+                                    <div class="service-icon ">
+                                        <img class="img-fluid" src="{{ $formation->picture }}" alt="">
                                     </div>
                                     <h5 class="mb-3">ISO 21502</h5>
-                                    <p>Project Management</p>
-                                    <a class="btn px-3 mt-auto mx-auto" href="">En savoir plus</a>
+                                    <p>{{$formation->label}}</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="{{route('formation')}}">En savoir plus</a>
                                 </div>
                             </div>
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                    <div class="service-icon btn-square">
-                                        <i class="fa fa-power-off fa-2x"></i>
-                                    </div>
-                                    <h5 class="mb-3">ISO 27001</h5>
-                                    <p>Lead Auditor</p>
-                                    <a class="btn px-3 mt-auto mx-auto" href="">En savoir plus</a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
-                    </div>
-                    <div class="col-md-6 pt-md-4">
-                        <div class="row g-4">
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                    <div class="service-icon btn-square">
-                                        <i class="fa fa-graduation-cap fa-2x"></i>
-                                    </div>
-                                    <h5 class="mb-3">ISO 27001</h5>
-                                    <p>Lead Implementer</p>
-                                    <a class="btn px-3 mt-auto mx-auto" href="">En savoir plus</a>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
-                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                    <div class="service-icon btn-square">
-                                        <i class="fa fa-brain fa-2x"></i>
-                                    </div>
-                                    <h5 class="mb-3">ISO 27001</h5>
-                                    <p>Foundation</p>
-                                    <a class="btn px-3 mt-auto mx-auto" href="">En savoir plus</a>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
-                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                    <div class="service-icon btn-square">
-                                        <i class="fa fa-brain fa-2x"></i>
-                                    </div>
-                                    <h5 class="mb-3">ISO 22301</h5>
-                                    <p>Business Continuity</p>
-                                    <a class="btn px-3 mt-auto mx-auto" href="">En savoir plus</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

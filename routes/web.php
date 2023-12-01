@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AboutPecbController;
+use App\Http\Controllers\Admin\AdminActualiteController;
 use App\Http\Controllers\Admin\AdminContactController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Admin\AdminFormationController;
@@ -17,10 +18,12 @@ use App\Http\Controllers\FormationController;
 use App\Http\Controllers\FoundationController;
 use App\Http\Controllers\ImplementerController;
 use App\Http\Controllers\ImplementerSceanceController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\ManagerSceanceController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SubscriptionController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,9 +38,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('feature.pages.index');
-});
+Route::get('/index',[IndexController::class,'Index'])->name('getIndex');
 
 Route::get('about',[AboutController::class,'About'])->name('about');
 
@@ -86,6 +87,8 @@ Route::get('subscription-result', [SubscriptionController::class, 'subscription_
 Route::post('news-letter', [ContactController::class, 'newsLetter'])->name('postNewsLetter');
 
 
+
+
 //Route Admin
 
 
@@ -117,6 +120,15 @@ Route::middleware('auth')->group(function() {
     Route::get('admin-formation/delete/{id}', [AdminFormationController::class, 'delete_formation'])->name('deleteFormation');
     Route::post('admin-formation/validate', [AdminFormationController::class, 'validate_formation'])->name('validateFormation');
     Route::get('admin-formation/view/{id}', [AdminFormationController::class, 'view'])->name('adminFormationView');
+
+    //actualite
+    Route::get('admin-actualite', [AdminActualiteController::class, 'Actualite'])->name('getAdminActualite');
+    Route::get('admin-actualite/edit', [AdminActualiteController::class, 'edit'])->name('editActualite');
+    Route::post('admin-actualite/edit', [AdminActualiteController::class, 'create'])->name('postActualite');
+    Route::get('admin-actualite/edit/{id}', [AdminActualiteController::class, 'update_actualite'])->name('updateActualite');
+    Route::get('admin-actualite/delete/{id}', [AdminActualiteController::class, 'delete_actualite'])->name('deleteActualite');
+    Route::post('admin-actualite/validate', [AdminActualiteController::class, 'validate_actualite'])->name('validateActualite');
+    Route::get('admin-actualite/view/{id}', [AdminActualiteController::class, 'view'])->name('adminActualiteView');
 
     Route::get('admin-subscription', [AdminSubscriptionController::class, 'subscription'])->name('adminSubscription'); //list
     Route::get('admin-subscription/edit', [AdminSubscriptionController::class, 'edit'])->name('AdminEditSubscription'); //get edit view
