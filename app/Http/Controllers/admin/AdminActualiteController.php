@@ -41,8 +41,8 @@ class AdminActualiteController extends Controller
         //register picture formation
         if($request->hasFile('picture')){
             try{
-                $path = imagePath()['actualite']['path'];
-                $filename = getUrlImage($request->picture, $path);
+                $path = imagePaths()['actualite']['path'];
+                $filename = getUrlImages($request->picture, $path);
                 $actualite->picture = $filename;
             }catch (\Exception $e) {
                 return back();

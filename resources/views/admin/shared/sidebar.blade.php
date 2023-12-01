@@ -60,11 +60,11 @@
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Tableau de bord</span>
                     </a>
                 </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link {{'getAdminActualite' == request()->path() ? 'active' : ''}}" href="{{route('getAdminActualite')}}" data-key="t-analytics">--}}
-{{--                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Actualités</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item">
+                    <a class="nav-link {{'getAdminActualite' == request()->path() ? 'active' : ''}}" href="{{route('getAdminActualite')}}" data-key="t-analytics">
+                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Actualités</span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="#sidebarCharts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCharts">
                         <i class="ri-pie-chart-line"></i> <span data-key="t-charts">Formations</span>

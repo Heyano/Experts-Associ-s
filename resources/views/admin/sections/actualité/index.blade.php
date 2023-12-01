@@ -55,6 +55,7 @@
                                         <th>@lang('Nbre')</th>
                                         <th>@lang('Image')</th>
                                         <th>@lang('Intitulé de l\'actualité')</th>
+                                        <th>@lang('Ville')</th>
                                         <th>@lang('Contenu')</th>
                                         <th>@lang('Date')</th>
                                         <th>@lang('Actions')</th>

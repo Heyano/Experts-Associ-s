@@ -60,8 +60,29 @@ function imagePath()
 
     return $data;
 }
+function imagePaths()
+{
+    $data['actualite'] = [
+        'path' => 'images/admin/formation',
+        'size' => '992x740'
+    ];
 
+    return $data;
+}
 function getUrlImage($image, $url): string
+{
+    $destinationPath = public_path($url);
+    $file = $image;
+    //$filename = $file->getClientOriginalName();
+    $extension = $file->getClientOriginalExtension();
+    $filename = time() . '_' . uniqid() . '.' . $extension;
+    $file->move($destinationPath, $filename);
+    $filePath = $url.'/'.$filename;
+
+    return $filePath;
+}
+
+function getUrlImages($image, $url): string
 {
     $destinationPath = public_path($url);
     $file = $image;
