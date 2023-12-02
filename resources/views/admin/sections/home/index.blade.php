@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="d-flex align-items-end justify-content-between mt-4">
                                         <div>
-                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="55">0</span> </h4>
+                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="{{$countSubscription}}">0</span> </h4>
                                             <a href="{{route('adminSubscription')}}" class="text-decoration-underline">Voir les inscriptions</a>
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
@@ -52,15 +52,10 @@
                                         <div class="flex-grow-1 overflow-hidden">
                                             <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Formations</p>
                                         </div>
-{{--                                        <div class="flex-shrink-0">--}}
-{{--                                            <h5 class="text-danger fs-14 mb-0">--}}
-{{--                                                <i class="ri-arrow-right-down-line fs-13 align-middle"></i> -3.57 %--}}
-{{--                                            </h5>--}}
-{{--                                        </div>--}}
                                     </div>
                                     <div class="d-flex align-items-end justify-content-between mt-4">
                                         <div>
-                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="34">0</span></h4>
+                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="{{$countFormation}}">0</span></h4>
                                             <a href="{{route('getAdminFormation')}}" class="text-decoration-underline">Voir toutes les formations</a>
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
@@ -81,15 +76,10 @@
                                         <div class="flex-grow-1 overflow-hidden">
                                             <p class="text-uppercase fw-medium text-muted text-truncate mb-0">Sessions</p>
                                         </div>
-{{--                                        <div class="flex-shrink-0">--}}
-{{--                                            <h5 class="text-success fs-14 mb-0">--}}
-{{--                                                <i class="ri-arrow-right-up-line fs-13 align-middle"></i> +29.08 %--}}
-{{--                                            </h5>--}}
-{{--                                        </div>--}}
                                     </div>
                                     <div class="d-flex align-items-end justify-content-between mt-4">
                                         <div>
-                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="15">0</span> </h4>
+                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="{{$countSession}}">0</span> </h4>
                                             <a href="{{route('getAdminSession')}}" class="text-decoration-underline">Voir les sessions</a>
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
@@ -110,15 +100,10 @@
                                         <div class="flex-grow-1 overflow-hidden">
                                             <p class="text-uppercase fw-medium text-muted text-truncate mb-0"> Contact</p>
                                         </div>
-{{--                                        <div class="flex-shrink-0">--}}
-{{--                                            <h5 class="text-muted fs-14 mb-0">--}}
-{{--                                                +0.00 %--}}
-{{--                                            </h5>--}}
-{{--                                        </div>--}}
                                     </div>
                                     <div class="d-flex align-items-end justify-content-between mt-4">
                                         <div>
-                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="169">0</span></h4>
+                                            <h4 class="fs-22 fw-semibold ff-secondary mb-4"><span class="counter-value" data-target="{{$countContact}}">0</span></h4>
                                             <a href="{{route('AdminContactList')}}" class="text-decoration-underline">Voir les contacts</a>
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">

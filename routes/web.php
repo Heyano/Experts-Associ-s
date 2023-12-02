@@ -8,6 +8,7 @@ use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\Admin\AdminFormationController;
 use App\Http\Controllers\Admin\AdminNewsLetterController;
 use App\Http\Controllers\Admin\AdminSubscriptionController;
+use App\Http\Controllers\Admin\AdminTeamController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\AuditorController;
 use App\Http\Controllers\BusinessController;
@@ -129,6 +130,15 @@ Route::middleware('auth')->group(function() {
     Route::get('admin-actualite/delete/{id}', [AdminActualiteController::class, 'delete_actualite'])->name('deleteActualite');
     Route::post('admin-actualite/validate', [AdminActualiteController::class, 'validate_actualite'])->name('validateActualite');
     Route::get('admin-actualite/view/{id}', [AdminActualiteController::class, 'view'])->name('adminActualiteView');
+
+    //team
+    Route::get('admin-team', [AdminTeamController::class, 'Team'])->name('getAdminTeam');
+    Route::get('admin-team/edit', [AdminTeamController::class, 'edit'])->name('editTeam');
+    Route::post('admin-team/edit', [AdminTeamController::class, 'create'])->name('postTeam');
+    Route::get('admin-team/edit/{id}', [AdminTeamController::class, 'update_team'])->name('updateTeam');
+    Route::get('admin-team/delete/{id}', [AdminTeamController::class, 'delete_team'])->name('deleteTeam');
+    Route::post('admin-team/validate', [AdminTeamController::class, 'validate_team'])->name('validateTeam');
+    Route::get('admin-team/view/{id}', [AdminTeamController::class, 'view'])->name('adminTeamView');
 
     Route::get('admin-subscription', [AdminSubscriptionController::class, 'subscription'])->name('adminSubscription'); //list
     Route::get('admin-subscription/edit', [AdminSubscriptionController::class, 'edit'])->name('AdminEditSubscription'); //get edit view

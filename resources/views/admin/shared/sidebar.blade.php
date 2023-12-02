@@ -62,7 +62,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{'getAdminActualite' == request()->path() ? 'active' : ''}}" href="{{route('getAdminActualite')}}" data-key="t-analytics">
-                        <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Actualités</span>
+                        <i class="ri-newspaper-fill"></i> <span data-key="t-dashboards">Actualités</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -100,6 +100,11 @@
                             </li>
                         </ul>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{'getAdminTeam' == request()->path() ? 'active' : ''}}" href="{{route('getAdminTeam')}}" data-key="t-analytics">
+                        <i class="ri-mental-health-fill"></i> <span data-key="t-dashboards">Membres</span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{'getNewsLetter' == request()->path() ? 'active' : ''}}" href="{{route('getNewsLetter')}}" data-key="t-analytics">

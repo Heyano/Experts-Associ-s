@@ -39,7 +39,7 @@
                         <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
                             <i class="fa fa-users fa-3x text-white"></i>
                             <div class="ms-3">
-                                <h2 class="text-white mb-0" data-toggle="counter-up">509</h2>
+                                <h2 class="text-white mb-0" data-toggle="counter-up">{{$countSubscription}}</h2>
                                 <p class="text-white mb-0">Des étudiants satisfaits</p>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                         <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
                             <i class="fa fa-check fa-3x text-white"></i>
                             <div class="ms-3">
-                                <h2 class="text-white mb-0" data-toggle="counter-up">365</h2>
+                                <h2 class="text-white mb-0" data-toggle="counter-up">{{$countFormation}}</h2>
                                 <p class="text-white mb-0">Projet terminé</p>
                             </div>
                         </div>

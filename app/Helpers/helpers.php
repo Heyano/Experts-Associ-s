@@ -51,6 +51,7 @@ function prepareFormation($label, $date, $picture, $duration, $content, $time, $
     return $formation;
 }
 
+//formationImage
 function imagePath()
 {
     $data['formation'] = [
@@ -60,15 +61,7 @@ function imagePath()
 
     return $data;
 }
-function imagePaths()
-{
-    $data['actualite'] = [
-        'path' => 'images/admin/formation',
-        'size' => '992x740'
-    ];
 
-    return $data;
-}
 function getUrlImage($image, $url): string
 {
     $destinationPath = public_path($url);
@@ -82,6 +75,16 @@ function getUrlImage($image, $url): string
     return $filePath;
 }
 
+//actulitéImage
+function imagePaths()
+{
+    $data['actualite'] = [
+        'path' => 'images/admin/formation',
+        'size' => '992x740'
+    ];
+
+    return $data;
+}
 function getUrlImages($image, $url): string
 {
     $destinationPath = public_path($url);
@@ -95,3 +98,26 @@ function getUrlImages($image, $url): string
     return $filePath;
 }
 
+//teamImage
+function imagePathTeam()
+{
+    $data['team'] = [
+        'path' => 'images/admin/formation',
+        'size' => '992x740'
+    ];
+
+    return $data;
+}
+
+function getUrlImageTeam($image, $url): string
+{
+    $destinationPath = public_path($url);
+    $file = $image;
+    //$filename = $file->getClientOriginalName();
+    $extension = $file->getClientOriginalExtension();
+    $filename = time() . '_' . uniqid() . '.' . $extension;
+    $file->move($destinationPath, $filename);
+    $filePath = $url.'/'.$filename;
+
+    return $filePath;
+}

@@ -11,82 +11,25 @@
             </div>
             <div class="col-lg-7">
                 <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="row g-4">
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                    <img class="img-fluid rounded-circle p-4" src="img/hero-5.jpg" alt="">
-                                    <h5 class="mb-0">David Bilongo</h5>
-                                    <small>fondateur et PDG</small>
-                                    <div class="d-flex justify-content-center mt-3">
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                    <img class="img-fluid rounded-circle p-4" src="img/hero-4.jpg" alt="">
-                                    <h5 class="mb-0">Ardi Ngami</h5>
-                                    <small>Directeur Exécutif</small>
-                                    <div class="d-flex justify-content-center mt-3">
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
+                    @foreach($teams as $team)
+                    <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="team-item bg-white text-center rounded p-4 pt-0">
+                            <img class="img-fluid rounded-circle p-4" src="{{$team->picture}}" alt="">
+                            <h5 class="mb-0">{{$team->firstname}} {{$team->name}}</h5>
+                            <small>{{$team->post}}</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary m-1" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary m-1" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary m-1" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square btn-primary m-1" href=""><i
+                                        class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 pt-md-4">
-                        <div class="row g-4">
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                    <img class="img-fluid rounded-circle p-4" src="img/hero-6.jpg" alt="">
-                                    <h5 class="mb-0">Rollande Okouo</h5>
-                                    <small>Co Fondateur</small>
-                                    <div class="d-flex justify-content-center mt-3">
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
-                                <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                    <img class="img-fluid rounded-circle p-4" src="img/hero-2.jpg" alt="">
-                                    <h5 class="mb-0">Gaïlaur Louhounou</h5>
-                                    <small>Chef de projet</small>
-                                    <div class="d-flex justify-content-center mt-3">
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square btn-primary m-1" href=""><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

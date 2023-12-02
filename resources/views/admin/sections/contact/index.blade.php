@@ -51,9 +51,9 @@
                                     <thead>
                                     <tr>
                                         <th>@lang('Nbre')</th>
-                                        <th>@lang('Date')</th>
                                         <th>@lang('Nom et Prénom du contact')</th>
                                         <th>@lang('Téléphone')</th>
+                                        <th>@lang('Date')</th>
                                         <th>@lang('Message')</th>
                                         <th>@lang('Actions')</th>
                                     </tr>
