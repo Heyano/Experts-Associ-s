@@ -40,7 +40,7 @@
                             <i class="fa fa-users fa-3x text-white"></i>
                             <div class="ms-3">
                                 <h2 class="text-white mb-0" data-toggle="counter-up">{{$countSubscription}}</h2>
-                                <p class="text-white mb-0">Des étudiants satisfaits</p>
+                                <p class="text-white mb-0">Des étudiants inscrits</p>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                             <i class="fa fa-check fa-3x text-white"></i>
                             <div class="ms-3">
                                 <h2 class="text-white mb-0" data-toggle="counter-up">{{$countFormation}}</h2>
-                                <p class="text-white mb-0">Projet terminé</p>
+                                <p class="text-white mb-0">Formation en ligne</p>
                             </div>
                         </div>
                     </div>

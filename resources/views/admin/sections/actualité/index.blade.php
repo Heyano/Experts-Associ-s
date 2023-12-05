@@ -30,7 +30,7 @@
                         <div class="listjs-table" id="customerList">
                             <div class="row g-4 mb-3">
                                 <div class="card-header">
-                                    <a href="{{ route('editActualite') }}" class="btn btn-primary" style="margin-left: 90%; color: black">
+                                    <a href="{{ route('editActualite') }}" class="btn btn-primary" style="margin-left: 90%">
                                         <i class="ri-add-line align-bottom me-1"></i>
                                         Ajouter
                                     </a>
@@ -56,7 +56,6 @@
                                         <th>@lang('Image')</th>
                                         <th>@lang('Intitulé de l\'actualité')</th>
                                         <th>@lang('Ville')</th>
-                                        <th>@lang('Contenu')</th>
                                         <th>@lang('Date')</th>
                                         <th>@lang('Actions')</th>
                                     </tr>
@@ -71,8 +70,7 @@
                                             <td><img src="{{ url($item->picture) }}" style="width: 32px"></td>
                                             <td>{{$item->label}}</td>
                                             <td>{{$item->city}}</td>
-                                            <td>{{$item->content}}</td>
-                                            <td>{{$item->date}}</td>
+                                            <td>{{date('d-M-y', strtotime($item->date))}}</td>
                                             <td>
                                                 <div style="display: flex;">
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">

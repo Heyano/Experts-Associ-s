@@ -79,3 +79,4 @@
     </div>
 </div>
 <!-- FAQs Start -->
+@include('feature.sections.home-sections.newsletter')

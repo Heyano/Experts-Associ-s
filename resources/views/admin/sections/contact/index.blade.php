@@ -30,7 +30,7 @@
                         <div class="listjs-table" id="customerList">
                             <div class="row g-4 mb-3">
                                 <div class="card-header">
-                                    <a href="{{ route('AdminEditContact') }}" class="btn btn-primary" style="margin-left: 90%; color: black">
+                                    <a href="{{ route('AdminEditContact') }}" class="btn btn-primary" style="margin-left: 90%">
                                         <i class="ri-add-line align-bottom me-1"></i>
                                         Ajouter
                                     </a>
@@ -67,7 +67,7 @@
                                             <th scope="row">{{ $ide += 1 }}</th>
                                             <td>{{$item->name}}</td>
                                             <td>{{$item->phone}}</td>
-                                            <td>{{$item->created_at}}</td>
+                                            <td>{{date('d-M-y', strtotime($item->created_at))}}</td>
                                             <td>{{$item->message}}</td>
                                             <td>
                                                 <div style="display: flex;">

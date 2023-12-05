@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Actualite;
+use App\Models\Contact;
+use App\Models\Subscription;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -11,16 +13,28 @@ class AdminTeamController extends Controller
 {
     public function Team(){
         $teams = Team::all();
-        return view('admin.pages.team.index', compact('teams'));
+        $contacts = Contact::all();
+        $countContact = sizeof($contacts);
+        $subscriptions = Subscription::all();
+        $countSubscription = sizeof($subscriptions);
+        return view('admin.pages.team.index', compact('teams','contacts','countContact','subscriptions','countSubscription'));
     }
     public function view(Request $request){
         $id = $request->id;
         $team = Team::findOrFail($id);
-        return view('admin.pages.team.view', compact('team'));
+        $contacts = Contact::all();
+        $countContact = sizeof($contacts);
+        $subscriptions = Subscription::all();
+        $countSubscription = sizeof($subscriptions);
+        return view('admin.pages.team.view', compact('team','contacts','countContact','subscriptions','countSubscription'));
     }
 
     public function edit(){
-        return view('admin.pages.team.create');
+        $contacts = Contact::all();
+        $countContact = sizeof($contacts);
+        $subscriptions = Subscription::all();
+        $countSubscription = sizeof($subscriptions);
+        return view('admin.pages.team.create', compact('contacts','countContact','subscriptions','countSubscription'));
     }
 
     public function create(Request $request){
@@ -37,7 +51,7 @@ class AdminTeamController extends Controller
         //on affecte les champs du html dans le model
         $team = new Team();
         $team->name = $request->name;
-        $team->date = $request->date;
+        $team->date = $request->format('d-m-Y');
 
         //register picture formation
         if($request->hasFile('picture')){
@@ -63,7 +77,11 @@ class AdminTeamController extends Controller
 
     public function update_team($id){
         $team = Team::find($id);
-        return view('admin.pages.team.update', compact('team'));
+        $contacts = Contact::all();
+        $countContact = sizeof($contacts);
+        $subscriptions = Subscription::all();
+        $countSubscription = sizeof($subscriptions);
+        return view('admin.pages.team.update', compact('team','contacts','countContact','subscriptions','countSubscription'));
     }
 
     public function validate_team(Request $request){
@@ -79,7 +97,7 @@ class AdminTeamController extends Controller
         $team = Actualite::findOrFail($request->id);
         $team->name = $request->name;
         $team->picture = $request->picture;
-        $team->date = $request->date;
+        $team->date = $request->format('d-m-Y');
         $team->firstname = $request->firstname;
         $team->post = $request->post;
         $team->update();

@@ -56,27 +56,27 @@
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                 <li class="nav-item">
-                    <a class="nav-link {{'getAdminIndex' == request()->path() ? 'active' : ''}}" href="{{route('getAdminIndex')}}" data-key="t-analytics">
+                    <a class="nav-link {{'admin-home' == request()->path() ? 'active' : ''}}" href="{{route('getAdminIndex')}}" data-key="t-analytics">
                         <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Tableau de bord</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{'getAdminActualite' == request()->path() ? 'active' : ''}}" href="{{route('getAdminActualite')}}" data-key="t-analytics">
+                    <a class="nav-link {{'admin-actualite' == request()->path() ? 'active' : ''}}" href="{{route('getAdminActualite')}}" data-key="t-analytics">
                         <i class="ri-newspaper-fill"></i> <span data-key="t-dashboards">Actualités</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarCharts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCharts">
+                    <a class="nav-link menu-link {{'admin-formation' == request()->path() ? 'active' : ''}}" href="#sidebarCharts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarCharts">
                         <i class="ri-pie-chart-line"></i> <span data-key="t-charts">Formations</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarCharts">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{route('getAdminCategory')}}" class="nav-link" data-key="t-line"> Catégories
+                                <a href="{{route('getAdminCategory')}}" class="nav-link {{'admin-category' == request()->path() ? 'active' : ''}}" data-key="t-line"> Catégories
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('getAdminFormation')}}" class="nav-link" data-key="t-area">Nos Formations
+                                <a href="{{route('getAdminFormation')}}" class="nav-link {{'admin-formation' == request()->path() ? 'active' : ''}}" data-key="t-area">Nos Formations
                                 </a>
                             </li>
                         </ul>
@@ -84,35 +84,35 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#sidebarIcons" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarIcons">
+                    <a class="nav-link menu-link {{'admin-subscription','admin-session' == request()->path() ? 'active' : ''}}" href="#sidebarIcons" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarIcons">
                         <i class="ri-compasses-2-line"></i> <span data-key="t-icons">Inscriptions</span>
                     </a>
                     <div class="collapse menu-dropdown" id="sidebarIcons">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="{{route('getAdminSession')}}" class="nav-link" data-key="t-remix">Sessions</a>
+                                <a href="{{route('getAdminSession')}}" class="nav-link {{'admin-session' == request()->path() ? 'active' : ''}}" data-key="t-remix">Sessions</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('getAdminAnnee')}}" class="nav-link" data-key="t-boxicons">Années</a>
+                                <a href="{{route('getAdminAnnee')}}" class="nav-link {{'admin-annee' == request()->path() ? 'active' : ''}}" data-key="t-boxicons">Années</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('adminSubscription')}}" class="nav-link" data-key="t-material-design">Nos Inscrptions</a>
+                                <a href="{{route('adminSubscription')}}" class="nav-link {{'admin-subscription' == request()->path() ? 'active' : ''}}" data-key="t-material-design">Nos Inscrptions</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{'getAdminTeam' == request()->path() ? 'active' : ''}}" href="{{route('getAdminTeam')}}" data-key="t-analytics">
+                    <a class="nav-link {{'admin-team' == request()->path() ? 'active' : ''}}" href="{{route('getAdminTeam')}}" data-key="t-analytics">
                         <i class="ri-mental-health-fill"></i> <span data-key="t-dashboards">Membres</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{'getNewsLetter' == request()->path() ? 'active' : ''}}" href="{{route('getNewsLetter')}}" data-key="t-analytics">
+                    <a class="nav-link {{'admin-news-letter' == request()->path() ? 'active' : ''}}" href="{{route('getNewsLetter')}}" data-key="t-analytics">
                         <i class="ri-newspaper-line"></i> <span data-key="t-dashboards">News-letter</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{'AdminContactList' == request()->path() ? 'active' : ''}}" href="{{route('AdminContactList')}}" data-key="t-analytics">
+                    <a class="nav-link {{'admin-contact' == request()->path() ? 'active' : ''}}" href="{{route('AdminContactList')}}" data-key="t-analytics">
                         <i class="ri-contacts-book-2-fill"></i> <span data-key="t-dashboards">Contact</span>
                     </a>
                 </li>

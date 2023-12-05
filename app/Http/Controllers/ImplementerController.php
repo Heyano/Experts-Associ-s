@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsLetter;
 use Illuminate\Http\Request;
 
 class ImplementerController extends Controller
 {
     //
     public function Implementer(){
-        return view('feature.pages.formation-pages.implementer');
+        $newsLetters = NewsLetter::all();
+        return view('feature.pages.formation-pages.implementer', compact('newsLetters'));
     }
+
 }

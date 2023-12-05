@@ -28,7 +28,7 @@
                     <div class="card-body">
                         <div class="listjs-table" id="customerList">
                             <div class="card-header">
-                                <a href="{{ route('AdminEditMail') }}" class="btn btn-primary" style="margin-left: 90%; color: black">
+                                <a href="{{ route('AdminEditMail') }}" class="btn btn-primary" style="margin-left: 90%">
                                     <i class="ri-add-line align-bottom me-1"></i>
                                     Ajouter
                                 </a>
@@ -63,7 +63,7 @@
                                         <tr>
                                             <th scope="row">{{ $ide += 1 }}</th>
                                             <td>{{$item->email}}</td>
-                                            <td>{{$item->created_at}}</td>
+                                            <td>{{date('d-M-y', strtotime($item->created_at))}}</td>
                                             <td>
                                                 <div style="display: flex;">
                                                     <div style="display: inline-block; flex: 1; margin: 5px;">

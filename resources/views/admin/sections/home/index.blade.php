@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-success-subtle rounded fs-3">
-                                                            <i class="bx bx-dollar-circle text-success"></i>
+                                                            <i class="bx bxs-school text-info"></i>
                                                         </span>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-info-subtle rounded fs-3">
-                                                            <i class="bx bx-shopping-bag text-info"></i>
+                                                            <i class="bx bx-certification text-info"></i>
                                                         </span>
                                         </div>
                                     </div>
@@ -84,7 +84,7 @@
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-warning-subtle rounded fs-3">
-                                                            <i class="bx bx-user-circle text-warning"></i>
+                                                            <i class="bx bx-dollar-circle text-warning"></i>
                                                         </span>
                                         </div>
                                     </div>
@@ -108,7 +108,7 @@
                                         </div>
                                         <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-primary-subtle rounded fs-3">
-                                                            <i class="bx bx-wallet text-primary"></i>
+                                                            <i class="bx bx-phone-call text-primary"></i>
                                                         </span>
                                         </div>
                                     </div>

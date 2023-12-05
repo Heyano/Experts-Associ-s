@@ -24,7 +24,6 @@ use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\ManagerSceanceController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SubscriptionController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +37,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 
 Route::get('/index',[IndexController::class,'Index'])->name('getIndex');
 

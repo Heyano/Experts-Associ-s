@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsLetter;
 use Illuminate\Http\Request;
 
 class BusnessSceanceController extends Controller
 {
     //
     public function BusnessSceance(){
-        return view('feature.pages.busnessSceance');
+        $newsLetters = NewsLetter::all();
+        return view('feature.pages.busnessSceance', compact('newsLetters'));
     }
+
 }

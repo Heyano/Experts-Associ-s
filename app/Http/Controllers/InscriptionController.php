@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsLetter;
 use Illuminate\Http\Request;
 
 class InscriptionController extends Controller
 {
     //
     public function Inscription(){
-        return view('feature.pages.inscription');
+        $newsLetters = NewsLetter::all();
+        return view('feature.pages.inscription', compact('newsLetters'));
     }
+
+
 }

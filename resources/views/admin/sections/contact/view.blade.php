@@ -28,7 +28,7 @@
                             <div class="col-lg-8">
                                 <div class="table-responsive border ">
                                     <table>
-                                        <tbody style="font-family: bold,'Times New Roman Black'; font-size: 18px!important;">
+                                        <tbody style="font-size: 18px!important;">
                                         <tr>
                                             <td><strong>Date : </strong>{{$contact->created_at}}</td>
                                         </tr>

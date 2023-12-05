@@ -30,7 +30,7 @@
                         <div class="listjs-table" id="customerList">
                             <div class="row g-4 mb-3">
                                 <div class="card-header">
-                                    <a href="{{ route('AdminEditSubscription') }}" class="btn btn-primary" style="margin-left: 90%; color: black">
+                                    <a href="{{ route('AdminEditSubscription') }}" class="btn btn-primary" style="margin-left: 90%">
                                         <i class="ri-add-line align-bottom me-1"></i>
                                         Ajouter
                                     </a>

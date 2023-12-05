@@ -28,7 +28,7 @@
                             <div class="col-lg-8">
                                 <div class="table-responsive border ">
                                     <table>
-                                        <tbody style="font-family: bold,'Times New Roman Black'; font-size: 18px!important;">
+                                        <tbody style="font-size: 18px!important;">
                                         <tr>
                                             <td style="margin-bottom: 50px !important;"><strong>Intitulé de la formation : </strong>{{$formation->label}}</td>
                                         </tr>

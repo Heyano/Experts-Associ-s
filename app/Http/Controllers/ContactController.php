@@ -10,7 +10,8 @@ class ContactController extends Controller
 {
     //
     public function Contact(){
-        return view('feature.pages.contact');
+        $newsLetters = NewsLetter::all();
+        return view('feature.pages.contact', compact('newsLetters'));
     }
     //create ou post
     public function newsLetter(Request $request){
@@ -23,7 +24,7 @@ class ContactController extends Controller
         $newsLetter->email = $request->email;
 
         $newsLetter->save();
-        return redirect('/')->with('status', 'Votre souscription a été soumi avec succes.');
+        return redirect('/index')->with('status', 'Votre souscription a été soumi avec succes.');
     }
 
 
@@ -45,6 +46,6 @@ class ContactController extends Controller
 
 
         $contact->save();
-        return redirect('/')->with('status', 'Votre requête a été soumi avec succes.');
+        return redirect('/index')->with('status', 'Votre requête a été soumi avec succes.');
     }
 }

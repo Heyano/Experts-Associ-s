@@ -30,7 +30,7 @@
                         <div class="listjs-table" id="customerList">
                             <div class="row g-4 mb-3">
                                 <div class="card-header">
-                                    <button type="button" class="btn btn-primary" style="margin-left: 90%; color: black" data-bs-toggle="modal" data-bs-target="#categoryModal">
+                                    <button type="button" class="btn btn-primary" style="margin-left: 90%" data-bs-toggle="modal" data-bs-target="#categoryModal">
                                         <i class="fe fe-plus mr-2"></i>
                                         Ajouter
                                     </button>

@@ -41,3 +41,4 @@
 <!-- Case Start -->
 @include('feature.sections.home-sections.case')
 <!-- Case End -->
+@include('feature.sections.home-sections.newsletter')

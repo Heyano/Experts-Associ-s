@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsLetter;
 use Illuminate\Http\Request;
 
 class AuditorController extends Controller
 {
     //
     public function Auditor(){
-        return view('feature.pages.formation-pages.auditor');
+        $newsLetters = NewsLetter::all();
+        return view('feature.pages.formation-pages.auditor', compact('newsLetters'));
     }
+
 }

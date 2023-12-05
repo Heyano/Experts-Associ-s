@@ -4,22 +4,36 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Actualite;
+use App\Models\Contact;
+use App\Models\Subscription;
 use Illuminate\Http\Request;
 
 class AdminActualiteController extends Controller
 {
     public function Actualite(){
         $actualites = Actualite::all();
-        return view('admin.pages.actualité.index', compact('actualites'));
+        $contacts = Contact::all();
+        $countContact = sizeof($contacts);
+        $subscriptions = Subscription::all();
+        $countSubscription = sizeof($subscriptions);
+        return view('admin.pages.actualité.index', compact('actualites','contacts','countContact','subscriptions','countSubscription'));
     }
     public function view(Request $request){
         $id = $request->id;
         $actualite = Actualite::findOrFail($id);
-        return view('admin.pages.actualité.view', compact('actualite'));
+        $contacts = Contact::all();
+        $countContact = sizeof($contacts);
+        $subscriptions = Subscription::all();
+        $countSubscription = sizeof($subscriptions);
+        return view('admin.pages.actualité.view', compact('actualite','contacts','countContact','subscriptions','countSubscription'));
     }
 
     public function edit(){
-        return view('admin.pages.actualité.create');
+        $contacts = Contact::all();
+        $countContact = sizeof($contacts);
+        $subscriptions = Subscription::all();
+        $countSubscription = sizeof($subscriptions);
+        return view('admin.pages.actualité.create',compact('contacts','countContact','subscriptions','countSubscription'));
     }
 
     public function create(Request $request){
@@ -36,7 +50,7 @@ class AdminActualiteController extends Controller
         //on affecte les champs du html dans le model
         $actualite = new Actualite();
         $actualite->label = $request->label;
-        $actualite->date = $request->date;
+        $actualite->date = $request->format('d-m-Y');
 
         //register picture formation
         if($request->hasFile('picture')){
@@ -62,7 +76,11 @@ class AdminActualiteController extends Controller
 
     public function update_actualite($id){
         $actualite = Actualite::find($id);
-        return view('admin.pages.actualité.update', compact('actualite'));
+        $contacts = Contact::all();
+        $countContact = sizeof($contacts);
+        $subscriptions = Subscription::all();
+        $countSubscription = sizeof($subscriptions);
+        return view('admin.pages.actualité.update', compact('actualite','contacts','countContact','subscriptions','countSubscription'));
     }
 
     public function validate_actualite(Request $request){
@@ -78,7 +96,7 @@ class AdminActualiteController extends Controller
         $actualite = Actualite::findOrFail($request->id);
         $actualite->label = $request->label;
         $actualite->picture = $request->picture;
-        $actualite->date = $request->date;
+        $actualite->date = $request->format('d-m-Y');
         $actualite->content = $request->input('content');
         $actualite->city = $request->city;
         $actualite->update();

@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\NewsLetter;
 use Illuminate\Http\Request;
 
 class ImplementerSceanceController extends Controller
 {
     //
     public function ImplementerSceance(){
-        return view('feature.pages.implementerSceance');
+        $newsLetters = NewsLetter::all();
+        return view('feature.pages.implementerSceance', compact('newsLetters'));
     }
+
 }

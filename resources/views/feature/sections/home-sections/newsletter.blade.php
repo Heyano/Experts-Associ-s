@@ -13,14 +13,24 @@
                         <li class="alert alert-danger"> {{$error}}</li>
                     @endforeach
                 </ul>
-                <div  class="position-relative w-100 mt-3 mb-2">
-                    <form method="post" action="{{ route('postNewsLetter') }}" class="comment-one__form contact-form-validated">
-                        @csrf
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email" name="email"
-                               placeholder="Entre Votre Adresse-Email" style="height: 48px;">
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
-                                class="fa fa-paper-plane text-primary fs-4"></i></button>
-                    </form>
+                <form method="post" action="{{ route('postNewsLetter') }}">
+                    @csrf
+                    <div class="row g-3">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="email" id="email" placeholder="Votre Email">
+                                <label for="email">Adresse-Email</label>
+                            </div>
+                        </div>
+                    <div class="row mt-5">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Envoyer</button>
+                        </div>
+                        <div class="col-4">
+                        </div>
+                    </div>
                 </div>
                 <small class="text-white-50">Soumettre en toute sécurité</small>
             </div>

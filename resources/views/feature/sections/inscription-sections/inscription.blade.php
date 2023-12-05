@@ -41,3 +41,4 @@
 <!-- Faq Start -->
 @include('feature.sections.home-sections.faq')
 <!-- Faq End -->
+@include('feature.sections.home-sections.newsletter')
