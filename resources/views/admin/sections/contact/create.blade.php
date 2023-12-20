@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-header">
                     <a href="{{ route('AdminContactList') }}" class="btn btn-secondary mr-3" style="margin-left: 90%;">
-                        <i class="fe fe-x mr-2"></i>Annuler
+                        <i class="fe fe-x mr-2"></i>Retour
                     </a>
                 </div>
                 <div class="card-body">

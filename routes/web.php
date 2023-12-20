@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\AboutPecbController;
 use App\Http\Controllers\Admin\AdminActualiteController;
 use App\Http\Controllers\Admin\AdminContactController;
 use App\Http\Controllers\admin\AdminController;
@@ -24,6 +23,7 @@ use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\ManagerSceanceController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\SubscriptionController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,11 +43,11 @@ Route::get('/index',[IndexController::class,'Index'])->name('getIndex');
 
 Route::get('about',[AboutController::class,'About'])->name('about');
 
-Route::get('aboutPecb',[AboutPecbController::class,'AboutPecb'])->name('aboutPecb');
-
 Route::get('formation',[FormationController::class,'Formation'])->name('formation');
 
 Route::post('news-letter', [ContactController::class, 'newsLetter'])->name('postNewsLetter');
+
+Route::get('service',[ServicesController::class,'Service'])->name('getService');
 
 Route::get('service-formation', [FormationController::class, 'service_formation'])->name('getServiceFormation'); //commentaire d'introduction de la formation
 

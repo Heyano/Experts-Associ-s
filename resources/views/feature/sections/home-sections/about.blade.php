@@ -9,7 +9,7 @@
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">A propos</div>
-                <h1 class="mb-4">Nous a signé un accord de partenariat avec Secured Systems International</h1>
+                <h1 class="mb-4">Experts-Associés</h1>
                 <p class="mb-4">Experts Associés Company est une entreprise innovante spécialisée dans la conception et la fabrication de solutions technologiques de pointe depuis plusieurs années.
                     Notre engagement envers l'excellence, la qualité et la satisfaction du client est au cœur de tout ce que nous faisons. Forts d'une équipe talentueuse de professionnels dévoués,
                     nous sommes fiers de proposer des produits et des services de premier ordre qui répondent aux besoins de nos clients.

@@ -3,7 +3,7 @@
     <div class="container pt-5">
         <div class="row g-5 pt-5">
             <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">PECB</div>
+                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Experts-Associés</div>
                 <h1 class="display-4 text-white mb-4 animated slideInRight">PROCHAINES DATES DE COURS</h1>
                 <p class="text-white mb-4 animated slideInRight">ISO 22301 BC
                     11.09.2023 - 15.09.2023</p>

@@ -12,7 +12,7 @@
 <div class="container-fluid sticky-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <a href="/" class="navbar-brand">
+            <a href="{{route('getIndex')}}" class="navbar-brand">
                 <img src="img/logo-web-light-230.png">
             </a>
             <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
@@ -21,7 +21,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
-                    <a href="{{route('getIndex')}}" class="nav-item nav-link {{'/index' == request()->path() ? 'active' : ''}}">Accueil</a>
+{{--                    <a href="{{route('getIndex')}}" class="nav-item nav-link {{'/index' == request()->path() ? 'active' : ''}}">Accueil</a>--}}
                     <a href="{{route('about')}}" class="nav-item nav-link {{'about' == request()->path() ? 'active' : ''}}">A propos de nous</a>
 {{--                    <div class="nav-item dropdown">--}}
 {{--                        <a href="{{route('management')}}" class="nav-link dropdown-toggle {{'management' == request()->path() ? 'active' : ''}}" data-bs-toggle="dropdown">Formations</a>--}}
@@ -34,7 +34,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
                     <a href="{{route('formation')}}" class="nav-item nav-link {{'formation' == request()->path() ? 'active' : ''}}">Formations</a>
-                    <a href="{{route('aboutPecb')}}" class="nav-item nav-link {{'aboutPecb' == request()->path() ? 'active' : ''}}">A propos de PECB</a>
+                    <a href="{{route('getService')}}" class="nav-item nav-link {{'service' == request()->path() ? 'active' : ''}}">Services</a>
                     <a href="{{route('news')}}" class="nav-item nav-link {{'news' == request()->path() ? 'active' : ''}}">Actualités</a>
                     <a href="{{route('contact')}}" class="nav-item nav-link {{'contact' == request()->path() ? 'active' : ''}}">Contact</a>
                 </div>

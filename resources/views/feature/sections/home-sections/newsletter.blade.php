@@ -22,7 +22,7 @@
                                 <label for="email">Adresse-Email</label>
                             </div>
                         </div>
-                    <div class="row mt-5">
+                    <div class="row mt-2">
                         <div class="col-4">
                         </div>
                         <div class="col-4">
