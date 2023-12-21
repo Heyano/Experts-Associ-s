@@ -50,7 +50,7 @@ class AdminActualiteController extends Controller
         //on affecte les champs du html dans le model
         $actualite = new Actualite();
         $actualite->label = $request->label;
-        $actualite->date = $request->format('d-m-Y');
+        $actualite->date = $request->date;
 
         //register picture formation
         if($request->hasFile('picture')){
@@ -96,7 +96,7 @@ class AdminActualiteController extends Controller
         $actualite = Actualite::findOrFail($request->id);
         $actualite->label = $request->label;
         $actualite->picture = $request->picture;
-        $actualite->date = $request->format('d-m-Y');
+        $actualite->date = $request->date;
         $actualite->content = $request->input('content');
         $actualite->city = $request->city;
         $actualite->update();

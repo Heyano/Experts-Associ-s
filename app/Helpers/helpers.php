@@ -5,9 +5,10 @@ use App\Models\Category;
 use App\Models\Formation;
 use App\Models\Session;
 
-function prepareCategory($label){
+function prepareCategory($label, $picture){
     $category = new Category();
     $category->label = $label;
+    $category->picture = $picture;
 
     return $category;
 }
@@ -79,7 +80,7 @@ function getUrlImage($image, $url): string
 function imagePaths()
 {
     $data['actualite'] = [
-        'path' => 'images/admin/formation',
+        'path' => 'images/admin/actualite',
         'size' => '992x740'
     ];
 
@@ -102,7 +103,7 @@ function getUrlImages($image, $url): string
 function imagePathTeam()
 {
     $data['team'] = [
-        'path' => 'images/admin/formation',
+        'path' => 'images/admin/team',
         'size' => '992x740'
     ];
 
@@ -118,6 +119,36 @@ function getUrlImageTeam($image, $url): string
     $filename = time() . '_' . uniqid() . '.' . $extension;
     $file->move($destinationPath, $filename);
     $filePath = $url.'/'.$filename;
+
+    return $filePath;
+}
+//categoryImage
+function imagePathCategory()
+{
+    $data['category'] = [
+        'path' => 'images/admin/category',
+        'size' => '992x740'
+    ];
+
+    return $data;
+}
+
+function getUrlImageCategory($image, $url): string
+{
+    $destinationPath = public_path($url);
+    $file = $image;
+
+    // Utilisez plutôt la méthode getClientOriginalExtension pour obtenir l'extension du fichier
+    $extension = $file->getClientOriginalExtension();
+
+    // Générez un nom de fichier unique basé sur le timestamp et un identifiant unique
+    $filename = time() . '_' . uniqid() . '.' . $extension;
+
+    // Déplacez le fichier vers le dossier de destination avec le nouveau nom de fichier
+    $file->move($destinationPath, $filename);
+
+    // Construisez le chemin complet du fichier
+    $filePath = $url . '/' . $filename;
 
     return $filePath;
 }
