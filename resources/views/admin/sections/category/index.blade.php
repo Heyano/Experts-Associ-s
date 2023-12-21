@@ -139,12 +139,21 @@
                         <p class="text-muted mx-4 mb-0">Creation d'une nouvelle categorie de formation</p>
                     </div>
                 </div>
-
                 <div class="mt-4">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li class="alert alert-danger"> {{$error}}</li>
+                        @endforeach
+                    </ul>
                     <form class="form" method="post" action="{{ route('AdminPostCategory') }}">
                         @csrf
                         <div class="row">
-                            <div class="col">
+                            <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">Libelle de la categorie</label>
                                     <input type="text" class="form-control" name="label" placeholder="libelle de la categorie" required>
