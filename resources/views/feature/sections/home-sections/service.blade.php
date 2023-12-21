@@ -13,14 +13,14 @@
             </div>
             <div class="col-lg-7">
                 <div class="row g-4">
-                    @foreach($formations as $formation)
+                    @foreach($categories as $category)
                     <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
                         <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                             <div class="service-icon " style="font-size: 10px">
-                                <img class="img-fluid" src="{{ $formation->picture }}" alt="">
+                                <img class="img-fluid" src="{{url('img/img.webp')}}" alt="">
                             </div>
-                            <h5 class="mb-3">{{$formation->category->label}}</h5>
-                            <p>{{$formation->label}}</p>
+                            <h5 class="mb-3">{{$category->label}}</h5>
+                            <p></p>
                             <a class="btn px-3 mt-auto mx-auto" href="{{route('formation')}}">En savoir plus</a>
                         </div>
                     </div>
